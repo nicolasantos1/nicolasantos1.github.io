@@ -1,0 +1,27 @@
+body
+{
+    letter-spacing: 0.1em; 
+    
+}
+.Banner {
+    
+    background-color: rgb(68, 196, 255);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px ;
+}
+
+.Banner ul{
+    
+    display: flex;
+    align-items: center;
+    
+}
+.Banner ul li{
+
+   margin: 0 30px;
+   background-color: white;
+   padding: 20px 40px;
+   border-radius: 30px; 
+}
