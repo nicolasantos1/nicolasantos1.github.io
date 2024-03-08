@@ -1,0 +1,88 @@
+
+.formatacao{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.titulo
+{
+    padding: 1em 0;
+    color: black;
+    font-weight: bold;
+    text-transform:capitalize;
+
+}
+.imagens
+{
+    text-align: center;
+    list-style: none;
+}
+.imagens li
+{
+    padding: 25px;
+}
+
+.link
+{
+    text-align: center;
+    padding-top: 2cm;
+}
+.diferenciais
+{
+    padding-top: 2cm;
+}
+.contato__subtitulo
+{
+    /* display = exibir */
+    display: inline;
+    color: black;
+}
+
+.contato__info
+{
+    margin: 16px 0 24px;
+    padding-left: 32px;
+}
+
+.contato__info-titulo,
+.contato__info-descricao
+{
+    display: inline-block;
+}
+
+.contato__info-descricao
+{
+
+    margin-left: 10px;
+}
+.contato__info-secao
+{
+    display: inline;
+}
+.contato__info-secao
+{
+    display: inline-block;
+    margin: 16px;
+}
+.contato__info-telefone
+{
+    margin-left: 32px;
+}
+
+
+.rodape
+{
+    padding: 1.75em 0;
+    font-size: 1.1rem;
+
+}
+.rodape__logo
+{
+    width: 6em;
+
+}
+.rodape__copyright
+{
+    display: inline;
+    margin-left: 1em;
+}
