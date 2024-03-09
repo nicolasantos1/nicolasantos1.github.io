@@ -1,3 +1,6 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
 body
 {
     letter-spacing: 0.1em; 
@@ -38,14 +41,14 @@ body
    color: rgb(160, 160, 160);
    border-radius: 0px; 
    padding: 0px;
+   transition: 0.3s;
+
 }
 .Banner a li:hover{
 
     color: white;
-    font-size: 1.2em;
-    transition-duration: 1s;
-    
-    
+    transform: scale(1.2);
+
  }
  
 #contat {
