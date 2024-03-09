@@ -14,7 +14,7 @@ body
 .Banner div{
     display: flex;
     justify-content: space-around;
-    width:  1000px;
+    width: 100%;
 }
 
 .Banner a{
@@ -43,7 +43,11 @@ body
 
     color: white;
     font-size: 1.2em;
+    transition-duration: 1s;
+    
+    
  }
+ 
 #contat {
     padding-right: 30px;
  }
