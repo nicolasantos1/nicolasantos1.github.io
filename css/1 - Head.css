@@ -12,46 +12,11 @@ body
     align-items: center;
     display: flex;
     justify-content: space-between;
-   
+    color: white;
 }
 .Banner div{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
-}
-
-.Banner a{
-    text-decoration: none;
-    list-style: none;
-   
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    justify-content: space-around;
-    
-    
-}
-.Banner ul
-{
-    display: flex;
     align-items: center;
 }
-
-.Banner a li{
-   color: rgb(160, 160, 160);
-   border-radius: 0px; 
-   padding: 0px;
-   transition: 0.3s;
-
-}
-.Banner a li:hover{
-
-    color: white;
-    transform: scale(1.2);
-
- }
- 
-#contat {
-    padding-right: 30px;
- }
-

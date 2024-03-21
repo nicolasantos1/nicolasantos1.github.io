@@ -31,20 +31,61 @@
 /*
     Projetos
 */
-.projeto{
-    clear: both;
+.caixas img{
+    display: flex;
+    float: left;
+  
+    
+}
+#h1_projeto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons_meno{
+    display: flex;
+    justify-content: end;
+}
+.caixas{
+    margin: 10px;
+    min-width: 250px;
+    min-height: 130px;
+    border-radius: 20px;
+    background-color: rgb(59, 59, 59);
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.projeto a{
+    background-color: rgb(202, 202, 202);
+    border: 2px solid black;
+    margin: 10px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border-width: 0.01mm;
 }
 
 .grid{
-    
+
     display: flex;
     justify-content: center;
-    align-items: end;
-    align-content: end;
+
 }
-button{
-    padding: 100px;
+.txt_projeto{
+    position: absolute;
 }
+.buttons_img{
+    opacity: 20%;
+    border-radius: 20px;
+    min-width: 250px;
+    min-height: 130px;
+    max-width: 300px;
+    max-height: 100px;
+    width: 50px;
+}
+
 /*
     Rodapé
 */
@@ -55,6 +96,10 @@ button{
     padding: 20px 0;
     border-style: solid;
     background-color: gray;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
 }
 .rodape_conteudo{
     margin: 0 8%;
@@ -72,7 +117,7 @@ ul{
     width: 50px;
 }
 .rodape_conteudo li{
-    background-color: chartreuse;
+    background-color: deepskyblue;
     border-radius: 80px;
     height: 80px;
     width: 80px;
@@ -82,4 +127,8 @@ ul{
 }
 .rodape_conteudo a{
     padding: 0 4%;
+    border-radius: 100px;
+}
+li:hover{
+    background-color: rgb(1, 105, 139);
 }
