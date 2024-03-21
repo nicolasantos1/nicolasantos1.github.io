@@ -11,14 +11,30 @@
     text-transform:capitalize;
 
 }
+.secaodotexto{
+    display: flex;
+    justify-content: space-between;
+}
+/*
+    teste
+*/
+.img_teste{
 
+    background-color: chartreuse;
+    min-width: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    
+    
+    
+}
 /*
     Projetos
 */
 .projeto{
-    
-   
+    clear: both;
 }
+
 .grid{
     
     display: flex;
@@ -33,6 +49,7 @@ button{
     Rodapé
 */
 .rodape{
+    clear: both;
     border-color: rgb(196, 196, 196);
     border-width: 30px 0 0 0;
     padding: 20px 0;
@@ -50,10 +67,19 @@ ul{
     display: flex;
 }
 /* responsivel o x em 600px*/
-#imagens
-{
+.imagens
+{  
     width: 50px;
-    padding: 0 25px;
 }
-
-
+.rodape_conteudo li{
+    background-color: chartreuse;
+    border-radius: 80px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.rodape_conteudo a{
+    padding: 0 4%;
+}
