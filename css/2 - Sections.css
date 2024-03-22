@@ -16,7 +16,7 @@
     justify-content: space-between;
 }
 /*
-    teste
+    teste img na lateral direita superior
 */
 .img_teste{
 
@@ -41,6 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 .buttons_meno{
     display: flex;
@@ -50,9 +51,9 @@
     margin: 10px;
     min-width: 250px;
     min-height: 130px;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: rgb(59, 59, 59);
-    display: flex;
+    display: block;
     justify-content: center;
    
 
@@ -78,12 +79,17 @@
 }
 .buttons_img{
     opacity: 20%;
-    border-radius: 20px;
-    min-width: 250px;
-    min-height: 130px;
+    border-radius: 15px;
+    min-width: 230px;
+    min-height: 110px;
     max-width: 300px;
     max-height: 100px;
     width: 50px;
+    position: relative;
+    bottom: 10px;
+    top: 10px;
+    right: 10px;
+    left: 10px;
 }
 
 /*
