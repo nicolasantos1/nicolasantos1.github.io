@@ -1,3 +1,25 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+body
+{
+    letter-spacing: 0.1em; 
+    
+}
+.Banner {
+    
+    background-color: rgb(41, 194, 255);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.Banner div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
 
 .formatacao{
     margin: 25px 8%;
@@ -11,9 +33,26 @@
     text-transform:capitalize;
 
 }
-.secaodotexto{
+.texto{
+    font-size: 50px;
+    color: black;
+    padding: 100px;
+    display: inline;
+    justify-content: center;
+    
+}
+#programador{
+    display: block;
+}
+.t1{
+    display: block;
+}
+.img_mini{
     display: flex;
-    justify-content: space-between;
+    align-items: end;
+}
+.img_mini img{
+    height: 60px;
 }
 /*
     teste img na lateral direita superior
@@ -34,9 +73,8 @@
 .caixas img{
     display: flex;
     float: left;
-  
-    
 }
+
 #h1_projeto{
     display: flex;
     align-items: center;
@@ -45,14 +83,19 @@
 }
 .buttons_meno{
     display: flex;
-    justify-content: end;
+    position: relative;
+    top: 50px;
+}
+.caixas h1{
+    position: relative;
+    top: 10px;
 }
 .caixas{
     margin: 10px;
     min-width: 250px;
     min-height: 130px;
     border-radius: 25px;
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(17, 17, 17);
     display: block;
     justify-content: center;
    
@@ -78,7 +121,7 @@
     position: absolute;
 }
 .buttons_img{
-    opacity: 20%;
+    opacity: 15%;
     border-radius: 15px;
     min-width: 230px;
     min-height: 110px;
@@ -98,14 +141,11 @@
 
 .rodape{
     
-    border-color: rgb(196, 196, 196);
+    border-color: rgb(223, 223, 223);
     border-width: 30px 0 0 0;
     border-style: solid;
-    background-color: gray;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    position: absolute;
+    background-color: rgb(212, 212, 212);
+   
 }
 
 .rodape_conteudo{
