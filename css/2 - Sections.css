@@ -95,11 +95,11 @@
 /*
     Rodapé
 */
+
 .rodape{
-    clear: both;
+    
     border-color: rgb(196, 196, 196);
     border-width: 30px 0 0 0;
-    padding: 20px 0;
     border-style: solid;
     background-color: gray;
     bottom: 0px;
@@ -107,34 +107,56 @@
     left: 0px;
     position: absolute;
 }
+
 .rodape_conteudo{
     margin: 0 8%;
     display: flex;
     justify-content: space-between; 
     
 }
+
+.rodape_contato{
+    width: 100%;
+   
+    align-content: center;
+    
+}
+
 ul{
+    width: 100%;
     align-items: center;
     display: flex;
+    justify-content: end;
+    
 }
 /* responsivel o x em 600px*/
+
 .imagens
 {  
-    width: 50px;
+    width: 40px;
 }
+
+.rodape_conteudo p{
+    color: rgb(0, 0, 0);
+    
+}
+
 .rodape_conteudo li{
     background-color: deepskyblue;
     border-radius: 80px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
-.rodape_conteudo a{
-    padding: 0 4%;
-    border-radius: 100px;
+
+#logo{
+    padding: 1%;
+    border-radius: 100px; 
 }
+
 li:hover{
     background-color: rgb(1, 105, 139);
 }
