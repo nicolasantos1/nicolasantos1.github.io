@@ -1,11 +1,14 @@
 *{
     font-family: "Roboto", sans-serif;
 }
+
 body
 {
     letter-spacing: 0.1em; 
-    
+    width: 100%;
+    height: 100%;
 }
+
 .Banner {
     
     background-color: rgb(41, 194, 255);
@@ -13,7 +16,9 @@ body
     display: flex;
     justify-content: space-between;
     color: white;
+    
 }
+
 .Banner div{
     display: flex;
     justify-content: center;
@@ -25,19 +30,12 @@ body
     margin: 25px 8%;
 }
 
-.titulo
-{
-    padding: 1em 0;
-    color: black;
-    font-weight: bold;
-    text-transform:capitalize;
 
-}
 .texto{
-    font-size: 50px;
+    font-size: 5vw;
     color: black;
-    padding: 100px;
-    display: inline;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     
 }
@@ -57,83 +55,60 @@ body
 /*
     teste img na lateral direita superior
 */
-.img_teste{
 
-    background-color: chartreuse;
-    min-width: 200px;
-    min-height: 200px;
-    max-height: 200px;
-    
-    
-    
-}
 /*
     Projetos
 */
-.caixas img{
-    display: flex;
-    float: left;
-}
-
-#h1_projeto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-.buttons_meno{
-    display: flex;
-    position: relative;
-    top: 50px;
-}
-.caixas h1{
-    position: relative;
-    top: 10px;
-}
 .caixas{
-    margin: 10px;
-    min-width: 250px;
-    min-height: 130px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     border-radius: 25px;
-    background-color: rgb(17, 17, 17);
-    display: block;
-    justify-content: center;
-   
-
+    background-color: rgb(16, 34, 68);
+    width: 300px;
+    box-shadow: 5px 5px 6px gray;
+}
+.projeto_texto h1{
+    padding: 8px 0;
 }
 
-.projeto a{
-    background-color: rgb(202, 202, 202);
+.projeto_btn{
+    display: flex;  
+    justify-content: space-evenly;
+}
+
+.projeto_btn a{
+    background-color: rgb(41, 194, 255);
     border: 2px solid black;
     margin: 10px;
     padding: 8px 15px;
     border-radius: 30px;
     border-width: 0.01mm;
+    width: 80px;
+    transition: 0.5s;
+
+}
+.projeto_btn a:hover{
+    background-color: rgb(22, 105, 138);
 }
 
-.grid{
-
-    display: flex;
+.projeto_img{
+    
+    padding: 10px;
     justify-content: center;
+    display: flex;
 
 }
-.txt_projeto{
-    position: absolute;
+.projeto_img img{
+    width: 80px;
+    padding: 0px 100px;
+    border-radius: 20px;
+    background-color: rgb(212, 212, 212);
 }
-.buttons_img{
-    opacity: 15%;
-    border-radius: 15px;
-    min-width: 230px;
-    min-height: 110px;
-    max-width: 300px;
-    max-height: 100px;
-    width: 50px;
-    position: relative;
-    bottom: 10px;
-    top: 10px;
-    right: 10px;
-    left: 10px;
-}
+
+
+
 
 /*
     Rodapé
@@ -175,7 +150,13 @@ ul{
 {  
     width: 40px;
 }
-
+.rodape{
+    position: relative;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .rodape_conteudo p{
     color: rgb(0, 0, 0);
     
@@ -199,4 +180,18 @@ ul{
 
 li:hover{
     background-color: rgb(1, 105, 139);
+}
+@media (max-width: 550px) {
+    .rodape_conteudo{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .rodape_conteudo ul
+    {
+        justify-content: ;
+        align-items: start;
+        
+    }
+    
 }
