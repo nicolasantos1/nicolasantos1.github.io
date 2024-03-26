@@ -7,6 +7,8 @@ body
     letter-spacing: 0.1em; 
     width: 100%;
     height: 100%;
+    
+    
 }
 
 .Banner {
@@ -16,6 +18,7 @@ body
     display: flex;
     justify-content: space-between;
     color: white;
+    
     
 }
 
@@ -59,18 +62,32 @@ body
 /*
     Projetos
 */
+.grid{
+    display: flex;
+}
+.grid_btn{
+    position: relative;
+    background-color: aqua;
+    width: 50px;
+}
 .caixas{
     color: white;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    
     border-radius: 25px;
     background-color: rgb(16, 34, 68);
-    width: 300px;
+    width: 260px;
     box-shadow: 5px 5px 6px gray;
 }
 .projeto_texto h1{
     padding: 8px 0;
+    text-align: center;
+}
+.projeto_texto p{
+    padding: 0 2px;
+    justify-content: justify;
+    text-align: center;
 }
 
 .projeto_btn{
@@ -101,8 +118,8 @@ body
 
 }
 .projeto_img img{
-    width: 80px;
-    padding: 0px 100px;
+    max-width: 80px;
+    padding: 0px 80px;
     border-radius: 20px;
     background-color: rgb(212, 212, 212);
 }
@@ -132,13 +149,11 @@ body
 
 .rodape_contato{
     width: 100%;
-   
     align-content: center;
     
 }
 
 ul{
-    width: 100%;
     align-items: center;
     display: flex;
     justify-content: end;
@@ -162,6 +177,7 @@ ul{
     
 }
 
+
 .rodape_conteudo li{
     background-color: deepskyblue;
     border-radius: 80px;
@@ -182,16 +198,36 @@ li:hover{
     background-color: rgb(1, 105, 139);
 }
 @media (max-width: 550px) {
+    .Banner div{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+    }
+    .Banner h4{
+        scale: 0.7;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .caixas{
+        transition: 0.5s;
+        scale: 0.85;
+    }
+    #projeto-2{
+        
+    }
+
     .rodape_conteudo{
         display: flex;
         flex-direction: column;
-
+        text-align: center;
+    }
+    .rodape_conteudo p{
+        font-size: 4vw;
     }
     .rodape_conteudo ul
     {
-        justify-content: ;
-        align-items: start;
-        
+        justify-content: space-evenly;
     }
     
 }
