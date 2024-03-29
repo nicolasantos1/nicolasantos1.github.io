@@ -11,21 +11,19 @@ body
     
 }
 
-.Banner {
+.banner {
     
     background-color: rgb(41, 194, 255);
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     color: white;
     
     
 }
 
-.Banner div{
+.banner_titulo{
     display: flex;
-    justify-content: center;
-    width: 100%;
     align-items: center;
 }
 
@@ -35,25 +33,40 @@ body
 
 
 .texto{
-    font-size: 5vw;
+    font-size: 4vw;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+   
 }
+
 #programador{
     display: block;
 }
 .t1{
     display: block;
 }
+.t2{
+    display: flex;
+}
+
 .img_mini{
     display: flex;
     align-items: end;
 }
 .img_mini img{
     height: 60px;
+}
+.sobre{
+    max-width: 600px;
+    font-size: 1.5vw;
+    
+}
+.sobre p,h2{
+    font-size: 1.5vw;
+    margin: 10px 0;
 }
 /*
     teste img na lateral direita superior
@@ -64,17 +77,16 @@ body
 */
 .grid{
     display: flex;
+
 }
 .grid_btn{
-    position: relative;
-    background-color: aqua;
-    width: 50px;
+   
 }
 .caixas{
+    margin: 50px;
     color: white;
     display: flex;
     flex-direction: column;
-    
     border-radius: 25px;
     background-color: rgb(16, 34, 68);
     width: 260px;
@@ -174,6 +186,7 @@ ul{
 }
 .rodape_conteudo p{
     color: rgb(0, 0, 0);
+    white-space: nowrap;
     
 }
 
@@ -197,13 +210,13 @@ ul{
 li:hover{
     background-color: rgb(1, 105, 139);
 }
-@media (max-width: 550px) {
-    .Banner div{
+@media (max-width: 620px) {
+    .banner_titulo{
         flex-direction: column;
         align-items: center;
         padding-top: 15px;
     }
-    .Banner h4{
+    #temp{
         scale: 0.7;
         margin: 0;
         padding: 5px;
