@@ -64,6 +64,10 @@ body
     font-size: 1.5em;
     margin: 0;
     padding: 10px 0 10px 0;
+  
+}
+.sobre span{
+    font-weight: bold;
     
 }
 /*
