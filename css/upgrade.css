@@ -1,0 +1,55 @@
+body{
+    
+    background-color: rgb(15, 26, 48);
+    color: rgb(177, 184, 202);
+    margin: 0;
+    font-size: 20px;
+}
+h1,h2{
+    margin: 0;
+
+    color: rgb(234, 240, 255);
+}
+.formatacao{
+    margin: 0 15vw;
+}
+.space_text{
+    display: flex;
+    justify-content: space-between;
+    
+    gap: 10px;
+}
+.nome{
+    white-space: nowrap;
+}
+.apresentation{
+    max-height: 80vh;
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    max-width: 500px;
+    padding: 10vh 0;
+}
+#containt{
+    width: 50vw;
+    max-width: 500px;
+    
+    margin: 8vh 0 0 0;
+    
+}
+.fotos{
+    background-color: red;
+  
+    align-content: center;
+    padding: 10px;
+}
+.projetos_sec {
+    display: flex;
+    padding-bottom: 40px;
+}
+.nav{
+    padding-top: 20px;
+}
