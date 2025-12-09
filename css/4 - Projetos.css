@@ -1,9 +1,0 @@
-
-.formatacao{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.formatacao div {
-    max-width: 500px;
-}

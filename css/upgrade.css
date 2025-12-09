@@ -4,12 +4,19 @@ body{
     color: rgb(177, 184, 202);
     margin: 0;
     font-size: 20px;
+    font-family: 'Roboto';
 }
-h1,h2{
-    margin: 0;
 
+h1,h2{  
+    height: 8vh;
+    font-family: 'Poppins';
+    margin: 0;
     color: rgb(234, 240, 255);
 }
+.eu p{
+    margin: 0;
+}
+
 .formatacao{
     margin: 0 15vw;
 }
