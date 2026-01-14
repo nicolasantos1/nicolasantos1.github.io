@@ -50,9 +50,10 @@ header li{
     flex-direction: column;
 }
 #projects h1{
-    color: rebeccapurple;
-    
+    margin: 15px;
 }
+
+
 section{
   
    justify-items: center;
@@ -70,7 +71,6 @@ main{
 .space-pic{
     width: 20vw;
     margin: 1vw;
-    
     
     
 }
