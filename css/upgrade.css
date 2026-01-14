@@ -15,7 +15,7 @@ a {
 }
 
 h1,h2{  
-    height: 8vh;
+
     font-family: 'Poppins';
     margin: 0;
     color: rgb(234, 240, 255);
@@ -36,15 +36,17 @@ header li{
     margin: 0 5px;
 }
 
-#nave{
-    
+#nave-contant{
     display: flex;
     justify-content: space-around;
     min-width: 40%;
 }
+
 #about{
-    
-    
+    margin: 0 19vw;
+}
+#about-content{
+     
 }
 #projects{
     flex-direction: column;

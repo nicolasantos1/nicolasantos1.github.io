@@ -18,66 +18,92 @@
 
 </head>
 <body>
-    <div id="formatacao">
-        <header>
+  <div id="formatacao">
+    <header>
+      <h1>
+        <a onclick="mostrar('home')">Home</a>
+      </h1>
+      <nav id="nav">
+        <ul id="nav-contant">
+          <li class="lista" id="nav-about">
+              <a onclick="mostrar('about')">About</a>
+          </li>
+          <li class="lista" id="nav-projects">
+              <a onclick="mostrar('projects')">Projects</a>
+          </li>
+          <li class="lista" id="nav-contact">
+              <a onclick="mostrar('contact')">Contact</a>
+          </li>
+          <li>
+              <button id="btnDownload"> Resume </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home" >
+        <main>
                 <h1>
-                    <a onclick="mostrar('home')">Home</a>
+                    I'M NICOLAS SANTOS               
                 </h1>
-                <nav id="nave">
-                    <li>
-                        <a onclick="mostrar('about')">About</a>
-                    </li>
-                    <li>
-                        <a onclick="mostrar('projects')">Projects</a>
-                    </li>
-                    <li>
-                        <a onclick="mostrar('contact')">Contact</a>
-                    </li>
-                    <li>
-                        <button id="btnDownload"> Resume </button>
-                    </li>
-                </nav>
-        </header>
-        <section id="home" style="visibility: collapse; display: none;" >
-            <main>
-                    <h1>
-                        I'M NICOLAS SANTOS               
-                    </h1>
-                    <p>
-                        Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
-                    </p>
-            </main>
-        </section>
-        <section id="contact" style="visibility: collapse; display: none">
-                <div>
-                    <p>email</p>
-                </div>
-        </section>
-        <section id="about" style="visibility: collapse;">
-            <div>
-                <p>EM PRODUÇÃO</p>
-            </div>
-        </section>
-        <section id="projects" style="visibility: visible; display: block;">
-                <div id="content-projects">
+                <p>
+                    Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
+                </p>
+                <a onclick="mostrar('about')">
+                  See more about me ->
+                </a>
+        </main>
+    </section>
+      <section id="about" style="display: none;">
+        <div id="about-content">
+            <p>
+                Meu caminho na programação não começou por acaso ou por romantização da área, mas pela decisão consciente de aprender uma habilidade sólida e aplicável. Com o tempo, fui entendendo que desenvolvimento de software exige constância, raciocínio lógico e disposição para enfrentar problemas que nem sempre têm respostas imediatas. É esse processo, mais do que qualquer talento inato, que define minha forma de trabalhar.
+            </p>
+            <p>
+                Aprendo principalmente fazendo. Testar, errar, corrigir e refazer fazem parte da minha rotina de estudo e desenvolvimento. Ao longo desse percurso, venho trabalhando com HTML, CSS e JavaScript, desenvolvendo interfaces funcionais e organizadas, sempre buscando clareza no código e uma boa experiência para quem utiliza a aplicação. Não me preocupo apenas com o resultado final, mas com o caminho até ele — estrutura, legibilidade e manutenção são pontos que levo a sério.
+            </p>
+            <p>
+                No back-end, tenho experiência com Java, integração com banco de dados e organização de projetos utilizando boas práticas, como o padrão DAO. Entendo a importância de separar responsabilidades, manter uma arquitetura limpa e escrever código que possa ser compreendido e evoluído com o tempo. Para mim, um sistema bem feito é aquele que continua funcionando e sendo compreensível mesmo depois de meses.
+            </p>
+            <p>
+                Dou bastante valor ao planejamento antes da implementação. Por isso, estudo e utilizo conceitos de UML, como diagramas de caso de uso, sequência e comunicação, para entender melhor o problema antes de partir para o código. Essa etapa me ajuda a evitar retrabalho e a desenvolver soluções mais coerentes e bem pensadas.
+            </p>
+            <p>
+                Tenho um perfil mais disciplinado e analítico do que impulsivo. Prefiro evoluir de forma consistente, consolidando fundamentos e boas práticas, ao invés de pular etapas. Sei que tecnologia é uma área em constante mudança, e por isso encaro o aprendizado como um processo contínuo, construído no dia a dia.
+            </p>
+            <p>
+                Além da parte técnica, acredito que saber se comunicar, explicar soluções e documentar decisões faz parte do trabalho de um bom desenvolvedor. Gosto de ambientes onde o aprendizado é compartilhado e onde existe espaço para evolução real, tanto técnica quanto profissional.
+            </p>
+            <p>
+                Este portfólio representa meu estágio atual como desenvolvedor e, principalmente, minha forma de encarar a área: com seriedade, esforço e vontade de crescer. Cada projeto aqui reflete horas de estudo, prática e refinamento, e marca mais um passo na construção da minha trajetória na tecnologia.
+            </p>
 
-                    <h1>Projects</h1>
-                    <br>
-                    <div id="table">
-                        <div class="space-pic">
-                            <img class="pictures" src="date/interditado.png"  alt="">
-                        </div>
-                        <div class="space-pic">
-                            <img class="pictures" src="date/interditado.png"  alt="">
-                        </div>
-                        <div class="space-pic">
-                            <img class="pictures" src="date/interditado.png"  alt="">
-                        </div>
-                        
-        
+        </div>
+    </section>
+    <section id="contact" style=" display: none">
+            <div>
+                <p>email</p>
+            </div>
+    </section>
+    <section id="projects" style=" display: none;">
+            <div id="content-projects">
+
+                <h1>Projects</h1>
+                <br>
+                <div id="table">
+                    <div class="space-pic">
+                        <img class="pictures" src="date/interditado.png"  alt="">
                     </div>
+                    <div class="space-pic">
+                        <img class="pictures" src="date/interditado.png"  alt="">
+                    </div>
+                    <div class="space-pic">
+                        <img class="pictures" src="date/interditado.png"  alt="">
+                    </div>
+                    
+    
                 </div>
-        </section>
-    </div>
+            </div>
+    </section>
+  </div>
 </body>
 </html>
