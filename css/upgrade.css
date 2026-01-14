@@ -6,6 +6,13 @@ body{
     font-size: 20px;
     font-family: 'Roboto';
 }
+li{
+    list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 h1,h2{  
     height: 8vh;
@@ -13,50 +20,63 @@ h1,h2{
     margin: 0;
     color: rgb(234, 240, 255);
 }
-.eu p{
-    margin: 0;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8vh 19vw;
+    
+}
+header h1{
+    align-content: center;
+   
+}
+header li{
+    margin: 0 5px;
 }
 
-.formatacao{
-    margin: 0 15vw;
-}
-.space_text{
-    display: flex;
-    justify-content: space-between;
+#nave{
     
-    gap: 10px;
-}
-.nome{
-    white-space: nowrap;
-}
-.apresentation{
-    max-height: 80vh;
-    top: 0;
-    position: sticky;
     display: flex;
+    justify-content: space-around;
+    min-width: 40%;
+}
+#about{
+    
+    
+}
+#projects{
     flex-direction: column;
-    justify-content: space-between;
-    width: 50vw;
-    max-width: 500px;
-    padding: 10vh 0;
 }
-#containt{
-    width: 50vw;
-    max-width: 500px;
-    
-    margin: 8vh 0 0 0;
+#projects h1{
+    color: rebeccapurple;
     
 }
-.fotos{
-    background-color: red;
+section{
   
-    align-content: center;
-    padding: 10px;
+   justify-items: center;
 }
-.projetos_sec {
+
+
+main{
+    max-width: 60%;
+}
+
+#table{
     display: flex;
-    padding-bottom: 40px;
 }
-.nav{
-    padding-top: 20px;
+
+.space-pic{
+    width: 20vw;
+    margin: 1vw;
+    
+    
+    
+}
+.pictures{
+    
+    border-radius: 10px;
+    width: 100%;
+    min-width: 180px;
 }

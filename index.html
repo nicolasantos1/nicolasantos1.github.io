@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Home | portifólio</title>
+    <link rel="icon" href="./img/Now__1_-removebg-preview.png">
+    <script src="js/script.js" defer></script>
+
+
     <link rel="stylesheet" href="css/upgrade.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,66 +18,68 @@
 
 </head>
 <body>
-    <div class="formatacao">
-        <div class="space_text">
-            <header class="apresentation">
-                <div>
-                    <div class="eu">
-                        <h1 class="nome">
-                            Nicolas Santos
-                        </h1>
-                        <h2>
-                            Programador
-                        </h2>
-                        <p>
-                            Desenvolvo sites e apps
-                        </p>
-                    </div>
-                    <div class="nav">
-                        <nav>Resumo</nav>
-                        <nav>Experiencia</nav>
-                        <nav>Projetos</nav>
+    <div id="formatacao">
+       <header>
+            <h1>
+                <a onclick="mostrar('home')">Home</a>
+            </h1>
+            <nav id="nave">
+                <li>
+                    <a onclick="mostrar('about')">About</a>
+                </li>
+                <li>
+                    <a onclick="mostrar('projects')">Projects</a>
+                </li>
+                <li>
+                    <a onclick="mostrar('contact')">Contact</a>
+                </li>
+                <li>
+                    <a href=""></a>Resume
+                </li>
+            </nav>
+       </header>
+       <section id="home" style="visibility: collapse; display: none;" >
+           <main>
+                <h1>
+                    I'M NICOLAS SANTOS               
+                </h1>
+                <p>
+                    Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
+                </p>
+           </main>
+       </section>
+       <section id="contact" style="visibility: collapse; display: none">
+            <div>
+                <p>email</p>
+            </div>
+       </section>
+       <section id="about" style="visibility: collapse;">
+            <div>
+                <p>asadfgsdfgsdfgsfdfgsgdfgsd</p>
+            </div>
+       </section>
 
-                    </div>
+       <section id="projects" style="visibility: visible; display: block;">
+            <div>
 
-                </div>
-                <div class="contato">
-                    <ul>
-                        <li>GitHub</li>
-                        <li>Instagram</li>
-                        <li>Linkedin</li>
-                    </ul>
-                        
-                </div>
-            </header>
-            <main id="containt">
-                <section>
-                    <p>
-                        Atualmente estou trabalhando em projetos, utilizando html, css e JavaScript, para desenvolver sites com interfaces estilizadas e interativas. buscando melhorar meu entendimento geral para me tornar um programador full-stack.
-                    </p>
+                <h1>Projects</h1>
+                <br>
+                <div id="table">
+                    <div class="space-pic">
+                        <img class="pictures" src="img/interditado.png"  alt="">
+                    </div>
+                    <div class="space-pic">
+                        <img class="pictures" src="img/interditado.png"  alt="">
+                    </div>
+                    <div class="space-pic">
+                        <img class="pictures" src="img/interditado.png"  alt="">
+                    </div>
                     
-                    <p>                        
-                    </p>
     
-                </section>
-                <!--
-                    <section class="projetos">
-                        <div class="projetos" id="notezin">
-                            <h1>notezin</h1>
-                            <div class="projetos_sec">
-                                <div class="fotos">
-                                    imagem
-                                </div>
-                                <div>
-                                    <p>meu trabalho</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                
-                -->
-            </main>
-        </div>
+                </div>
+            </div>
+       </section>
+
     </div>
 </body>
 </html>
