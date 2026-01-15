@@ -9,9 +9,16 @@ body{
 li{
     list-style: none;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+
+a:hover{
+    cursor: pointer;
+}
+a{  
+
+    padding: 5px;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
 }
 
 h1,h2{  
@@ -22,10 +29,8 @@ h1,h2{
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 8vh 19vw;
+    padding: 40px 0;
+    margin:auto;
     
 }
 header h1{
@@ -35,19 +40,33 @@ header h1{
 header li{
     margin: 0 5px;
 }
+nav{
+   
 
-#nave-contant{
+    align-items: center;
+}
+main{
+    margin: auto;
+    max-width: 60%;
+}
+.head{
+    margin: 0 15vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+#nav-contant{
     display: flex;
     justify-content: space-around;
     min-width: 40%;
+    align-items: center;
 }
 
-#about{
-    margin: 0 19vw;
-}
-#about-content{
-     
-}
+
+
 #projects{
     flex-direction: column;
 }
@@ -56,15 +75,7 @@ header li{
 }
 
 
-section{
-  
-   justify-items: center;
-}
 
-
-main{
-    max-width: 60%;
-}
 
 #table{
     display: flex;
@@ -81,4 +92,25 @@ main{
     border-radius: 10px;
     width: 100%;
     min-width: 180px;
+}
+#resume{
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    height: auto;   
+    
+}
+.resume-container{
+    height: 700px;
+    padding-bottom: 50px;
+}
+.resume-container img{
+    width: 100%;
+    height: 100%;
+   
+}
+.resume-container img:hover{
+    
+    transform: scale(1);
+    transition: all 1s ease;
 }

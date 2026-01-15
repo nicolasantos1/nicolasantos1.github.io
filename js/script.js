@@ -21,10 +21,11 @@ function show(secao){
 	}
 	
 }
-
+/* 
 document.getElementById("btnDownload").addEventListener("click", () => { 
     const link = document.createElement("a");
     link.href = "date/Currículo - Nicolas Santos Do Nascimento.pdf"; // caminho ou URL do arquivo
     link.download = "Currículo - Nicolas Santos Do Nascimento"; // nome do arquivo
     link.click();
 });
+*/

@@ -18,32 +18,34 @@
 
 </head>
 <body>
-  <div id="formatacao">
+<div id="formatacao">
     <header>
-      <h1>
-        <a onclick="mostrar('home')">Home</a>
-      </h1>
-      <nav id="nav">
-        <ul id="nav-contant">
-          <li class="lista" id="nav-about">
-              <a onclick="mostrar('about')">About</a>
-          </li>
-          <li class="lista" id="nav-projects">
-              <a onclick="mostrar('projects')">Projects</a>
-          </li>
-          <li class="lista" id="nav-contact">
-              <a onclick="mostrar('contact')">Contact</a>
-          </li>
-          <li>
-              <button id="btnDownload"> Resume </button>
-          </li>
-        </ul>
-      </nav>
+        <div class="head">
+            <h1>
+                <a onclick="mostrar('home')">Home</a>
+            </h1>
+            <nav id="nav">
+                <ul id="nav-contant">
+                    <li class="lista" id="nav-about">
+                        <a onclick="mostrar('about')">About</a>
+                    </li>
+                    <li class="lista" id="nav-projects">
+                        <a onclick="mostrar('projects')">Projects</a>
+                    </li>
+                    <li class="lista" id="nav-contact">
+                        <a onclick="mostrar('contact')">Contact</a>
+                    </li>
+                    <li class="lista" id="nav-resume">
+                        <a onclick="mostrar('resume')"> Resume </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>    
     </header>
     <section id="home" >
         <main>
                 <h1>
-                    I'M NICOLAS SANTOS               
+                    I'M NICOLAS SANTOS          
                 </h1>
                 <p>
                     Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
@@ -53,8 +55,11 @@
                 </a>
         </main>
     </section>
-      <section id="about" style="display: none;">
-        <div id="about-content">
+    <section id="about" style="display: none;">
+        <main id="about-content">
+            <h1>
+                about me.
+            </h1>
             <p>
                 Meu caminho na programação não começou por acaso ou por romantização da área, mas pela decisão consciente de aprender uma habilidade sólida e aplicável. Com o tempo, fui entendendo que desenvolvimento de software exige constância, raciocínio lógico e disposição para enfrentar problemas que nem sempre têm respostas imediatas. É esse processo, mais do que qualquer talento inato, que define minha forma de trabalhar.
             </p>
@@ -77,33 +82,45 @@
                 Este portfólio representa meu estágio atual como desenvolvedor e, principalmente, minha forma de encarar a área: com seriedade, esforço e vontade de crescer. Cada projeto aqui reflete horas de estudo, prática e refinamento, e marca mais um passo na construção da minha trajetória na tecnologia.
             </p>
 
-        </div>
+        </main>
     </section>
     <section id="contact" style=" display: none">
-            <div>
+            <main>
                 <p>email</p>
-            </div>
+            </main>
     </section>
     <section id="projects" style=" display: none;">
-            <div id="content-projects">
+        <main id="content-projects">
 
-                <h1>Projects</h1>
-                <br>
-                <div id="table">
-                    <div class="space-pic">
-                        <img class="pictures" src="date/interditado.png"  alt="">
-                    </div>
-                    <div class="space-pic">
-                        <img class="pictures" src="date/interditado.png"  alt="">
-                    </div>
-                    <div class="space-pic">
-                        <img class="pictures" src="date/interditado.png"  alt="">
-                    </div>
-                    
-    
+            <h1>Projects</h1>
+            <br>
+            <div id="table">
+                <div class="space-pic">
+                    <img class="pictures" src="date/interditado.png"  alt="">
                 </div>
+                <div class="space-pic">
+                    <img class="pictures" src="date/interditado.png"  alt="">
+                </div>
+                <div class="space-pic">
+                    <img class="pictures" src="date/interditado.png"  alt="">
+                </div>
+                
+
+            </div>
+        </main>
+    </section>
+    <section id="resume" style="display: none;">
+        <h1>
+            Resume
+        </h1>
+        <br>
+        
+            <div class="resume-container">
+            
+                <img src="date/PT Currículo.png" alt="">
+        
             </div>
     </section>
-  </div>
+</div>
 </body>
 </html>
