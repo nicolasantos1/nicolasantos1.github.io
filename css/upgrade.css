@@ -3,13 +3,19 @@ body{
     background-color: rgb(15, 26, 48);
     color: rgb(177, 184, 202);
     margin: 0;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 18px;
     font-family: 'Roboto';
 }
+
 li{
     list-style: none;
+    
 }
-
+.link{
+    color: rgb(234, 240, 255);;
+   
+}
 a:hover{
     cursor: pointer;
 }
@@ -21,11 +27,22 @@ a{
     text-decoration: none;
 }
 
+#name{
+    
+  font-weight: 500;
+  font-style: normal;
+  
+}
 h1,h2{  
 
     font-family: 'Poppins';
+
     margin: 0;
     color: rgb(234, 240, 255);
+}
+p{
+    line-height: 2;
+    letter-spacing: 0,5px;
 }
 
 header{
@@ -41,7 +58,6 @@ header li{
     margin: 0 5px;
 }
 nav{
-   
 
     align-items: center;
 }
@@ -49,6 +65,22 @@ main{
     margin: auto;
     max-width: 60%;
 }
+section:active{
+    background-color: cadetblue;
+    transform: scale(1);
+    transition: all 2s ease;
+}
+section::after{
+    background-color: cadetblue;
+    transform: scale(1);
+    transition: all 2s ease;
+}
+section::before{
+    background-color: cadetblue;
+    transform: scale(1);
+    transition: all 2s ease;
+}
+
 .head{
     margin: 0 15vw;
     display: flex;
@@ -64,7 +96,25 @@ main{
     min-width: 40%;
     align-items: center;
 }
+.lista{
+    border-radius: 5px;
+    padding: 5px;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+.lista:hover{
+    
+    background-color: rgba(255, 255, 255, 0.377);
+    color: white;
+    transform: scale(1);
+    transition: all 1s ease;
 
+}
+.lista:hover:after{
+    background-color: red;
+    transform: scale(1);
+    transition: all 1s ease;
+}
 
 
 #projects{
@@ -94,23 +144,43 @@ main{
     min-width: 180px;
 }
 #resume{
+    
     justify-content: center;
     margin: auto;
-    width: 70%;
+    
     height: auto;   
     
 }
+.resume-title{
+    position: relative;
+   
+    
+}
+
+#arrow-back{
+    width: 50px;
+    transform: ;
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    
+    transform: translateY(-50%)rotate(270deg);
+    object-fit: fill;
+    
+}
 .resume-container{
-    height: 700px;
-    padding-bottom: 50px;
+    text-align: center;
+    position: relative;       /* referência do overlay */
+    width: 600px;
+    margin: 50px auto;
+    
 }
 .resume-container img{
     width: 100%;
-  
-   
+    display: block;
 }
-.resume-container img:hover{
-    
-    transform: scale(1);
-    transition: all 1s ease;
-}
+
+/*   
+transform: scale(1);
+transition: all 1s ease;
+
