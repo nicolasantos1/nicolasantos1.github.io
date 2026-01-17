@@ -1,7 +1,7 @@
 body{
     
     background-color: rgb(15, 26, 48);
-    color: rgb(177, 184, 202);
+    color: rgb(192, 201, 223);
     margin: 0;
     font-weight: 400;
     font-size: 18px;
@@ -12,10 +12,7 @@ li{
     list-style: none;
     
 }
-.link{
-    color: rgb(234, 240, 255);;
-   
-}
+
 a:hover{
     cursor: pointer;
 }
@@ -65,20 +62,10 @@ main{
     margin: auto;
     max-width: 60%;
 }
-section:active{
-    background-color: cadetblue;
-    transform: scale(1);
-    transition: all 2s ease;
-}
-section::after{
-    background-color: cadetblue;
-    transform: scale(1);
-    transition: all 2s ease;
-}
-section::before{
-    background-color: cadetblue;
-    transform: scale(1);
-    transition: all 2s ease;
+
+.link{
+    color: rgb(234, 240, 255);;
+    font-weight: bold;
 }
 
 .head{
@@ -87,8 +74,13 @@ section::before{
     justify-content: space-between;
 
 }
-
-
+#home{
+    margin: 200px 0 ;
+    
+}
+#home main{
+  
+}
 
 #nav-contant{
     display: flex;
@@ -114,6 +106,10 @@ section::before{
     background-color: red;
     transform: scale(1);
     transition: all 1s ease;
+}
+
+.seeMore{
+    padding: 0 0 30px 0;
 }
 
 
@@ -151,23 +147,9 @@ section::before{
     height: auto;   
     
 }
-.resume-title{
-    position: relative;
-   
-    
-}
 
-#arrow-back{
-    width: 50px;
-    transform: ;
-    position: absolute;
-    left: -60px;
-    top: 50%;
-    
-    transform: translateY(-50%)rotate(270deg);
-    object-fit: fill;
-    
-}
+
+
 .resume-container{
     text-align: center;
     position: relative;       /* referência do overlay */
