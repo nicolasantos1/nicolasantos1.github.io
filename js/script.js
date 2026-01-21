@@ -3,14 +3,14 @@
 console.log("JS conectado com sucesso");
 
 function mostrar(secao) {
-
+	
 	document.querySelectorAll("section").forEach(secao => secao.style.display = "none");
 	document.getElementById(secao).style.display = "block";
 	show(secao);
 }
 
 function show(secao){
-
+	
 	document.querySelectorAll('.lista').forEach( function(element){
 		element.style.display = 'block'
 	} )

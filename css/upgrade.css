@@ -42,6 +42,30 @@ p{
     letter-spacing: 0,5px;
 }
 
+/*header*/
+@media (max-width: 629px){
+    
+    .some{   
+        display: none;
+    }
+    #nav-lines  {   
+        width: 50px;
+        height: 50px;
+    }
+    #nav-lines img{
+        display: block;
+        width: 50px;        
+        height: 50px;
+        object-fit: contain;
+    }
+}
+@media (min-width: 630px) {
+    
+    #nav-lines img{
+        display: none;
+    }
+}
+
 header{
     padding: 40px 0;
     margin:auto;
@@ -49,7 +73,7 @@ header{
 }
 header h1{
     align-content: center;
-   
+    
 }
 header li{
     margin: 0 5px;
@@ -58,35 +82,13 @@ nav{
 
     align-items: center;
 }
-main{
-    margin: auto;
-    max-width: 60%;
-}
-
-.link{
-    color: rgb(234, 240, 255);;
-    font-weight: bold;
-}
-
-.head{
-    margin: 0 15vw;
-    display: flex;
-    justify-content: space-between;
-
-}
-#home{
-    margin: 200px 0 ;
-    
-}
-#home main{
-  
-}
 
 #nav-contant{
     display: flex;
     justify-content: space-around;
     min-width: 40%;
     align-items: center;
+    padding: 0;
 }
 .lista{
     border-radius: 5px;
@@ -108,28 +110,47 @@ main{
     transition: all 1s ease;
 }
 
+
+/*conteudo*/
 .seeMore{
     padding: 0 0 30px 0;
 }
+main{
+    margin: auto;
+    max-width: 60%;
+}
+
+.link{
+    color: rgb(234, 240, 255);;
+    font-weight: bold;
+}
+
+.head{
+    margin: 0 15vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+#home{
+    margin-top: 10vw ;
+    
+}
 
 
+/*Projetcs only*/
 #projects{
-    flex-direction: column;
+    
 }
 #projects h1{
     margin: 15px;
 }
-
-
-
-
 #table{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-
 .space-pic{
-    
-    width: 20vw;
+
+    width: 200px + 2vw;
     margin: 1vw;
     
     
@@ -140,6 +161,9 @@ main{
     width: 100%;
     min-width: 180px;
 }
+
+
+/*Resume*/
 #resume{
     
     justify-content: center;
@@ -154,7 +178,7 @@ main{
 .resume-container{
     text-align: center;
     position: relative;       /* referência do overlay */
-    width: 600px;
+    max-width: 600px;
     margin: 50px auto;
     
 }
