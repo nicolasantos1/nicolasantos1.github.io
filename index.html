@@ -23,33 +23,43 @@
 <div id="formatacao">
     <header>
         <div class="head">
+            
             <h1>
-                <a onclick="mostrar('home')">Home</a>
+                <a id="home-icon" onclick="show('home')">Home</a>
             </h1>
-            <nav id="nav">
+            <div class="void" id="screen">
+                <div id="screen-container">
+                    <button id="screen-btn">
+                        <img src="file/btn-x.png" alt="">
+                    </button>
+                </div>
+                <ul id="screen-nav">
+                   
+                </ul>
+            </div>
+            <nav id="nav ">
                 <ul id="nav-contant">
-                    <li class="lista some" id="nav-about">
-                        <a onclick="mostrar('about')">About</a>
+                    <li class="lista home void" id="nav-home" >
+                        <a>Home</a>
                     </li>
-                    <li class="lista some" id="nav-projects">
-                        <a onclick="mostrar('projects')">Projects</a>
+                    <li class="lista about" id="nav-about">
+                        <a>About</a>
                     </li>
-                    <!--
-                        <li class="lista" id="nav-contact">
-                            <a onclick="mostrar('contact')">Contact</a>
-                        </li>
-                    -->
-                    <li class="lista some" id="nav-resume">
-                        <a onclick="mostrar('resume')"> Resume </a>
+                    <li class="lista project" id="nav-projects">
+                        <a>Projects</a>
                     </li>
-                    <li class="lista " id="nav-lines" >
-                        <img src="file/3lines.png" alt="">
+                    <li class="lista resume" id="nav-resume">
+                        <a> Resume </a>
                     </li>
                 </ul>
+                <button id="bars">
+                    <img id="bars-img" src="file/3lines.png" alt="">
+                </button>
+                    
             </nav>
         </div>    
     </header>
-    <section id="home" >
+    <section class="spaces" id="home" >
         <main>
                 <h1 id="name">
                     I'M NICOLAS SANTOS          
@@ -57,12 +67,12 @@
                 <p>
                     Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
                 </p>
-                <a class="seeMore link" onclick="mostrar('about')">
+                <a class="seeMore link" onclick="show('about')">
                   See more about me ->
                 </a>
         </main>
     </section>
-    <section id="about" style="display: none;">
+    <section class="spaces void" id="about" >
         <main id="about-content">
             <h1>
                 about me.
@@ -73,40 +83,19 @@
             <p>  
                 Learning primarily by doing. Testing, making mistakes, correcting, and redoing are part of my study and development routine. Throughout this journey, I've worked with HTML, CSS, and JavaScript, developing functional and organized interfaces, always clearly seeking a good user experience in the code. I don't just worry about the final result, but about the path to it—structure, readability, and maintenance are points I take seriously.
             </p>
-            <p>
-               In the back-end, I have experience with Java, database integration, and project organization using best practices, such as the DAO pattern. Understanding the importance of separating responsibilities, maintaining a clean architecture, and writing code that can be understood and developed over time. For me, a well-made system is one that continues to function and remain understandable even after months.
-
-            </p>
-            <p>  
-                I highly value planning before implementation. Therefore, I study and use UML concepts, such as use case, sequence, and communication diagrams, to better understand the problem before moving on to the code. This step helps me avoid rework and develop more consistent and well-thought-out solutions.
-            </p>
-            <p>               
-                I have a more disciplined and analytical profile than an impulsive one. I prefer to evolve consistently, consolidating fundamentals and best practices, rather than skipping steps. I know that technology is a constantly changing field, and therefore I see learning as a continuous process, built day by day.
-            </p>
-            <p>    
-                Beyond the technical aspects, I believe that knowing how to communicate, explain solutions, and document decisions is part of the work of a good developer. I like environments where learning is shared and where there is room for real evolution, both technical and professional.
-            </p>
-            <p>    
-                This portfolio represents my current stage as a developer and, above all, my approach to the field: with seriousness, effort, and a desire to grow. Each project here reflects hours of study, practice, and refinement, and marks another step in building my career in technology.
-            </p>
-            <a class="seeMore" onclick="mostrar('projects')">
+           
+           
+            <a class="seeMore" onclick="show('projects')">
                 See projects ->
             </a>
         </main>
     </section>
-    <!--
-        <section id="contact" style=" display: none">
-                <main>
-                    <p>email</p>
-                </main>
-        </section>
-    -->
-    <section id="projects" style=" display: none;">
+    <section class="spaces void" id="projects">
         <main id="content-projects">
 
             <h1>Projects</h1>
             <br>
-            <h3>EM BREVE</h3>
+            <h3>under development</h3>
             <div id="table"> 
                 <div class="space-pic">
                     <img class="pictures" src="file/interditado.png"  alt="">
@@ -122,7 +111,7 @@
             </div>
         </main>
     </section>
-    <section id="resume" style="display: none;">
+    <section class="spaces void" id="resume" screen-container">
         <main>
           
             <h1>

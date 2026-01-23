@@ -45,25 +45,42 @@ p{
 /*header*/
 @media (max-width: 629px){
     
-    .some{   
+    .lista{   
         display: none;
     }
-    #nav-lines  {   
-        width: 50px;
-        height: 50px;
+    #bars-img  {   
+        width: 100%;
+        background-color: none;
     }
-    #nav-lines img{
+    #bars{
+        background-color: rgba(0, 0, 0, 0);
         display: block;
         width: 50px;        
         height: 50px;
         object-fit: contain;
     }
+    #nav{
+        align-content: center;
+    }
+    #nav-contant{
+        display: none;
+
+    }   
+    
 }
 @media (min-width: 630px) {
     
-    #nav-lines img{
+    #bars{
         display: none;
     }
+    #nav-contant{
+    display: flex;
+    justify-content: space-around;
+    min-width: 40%;
+    align-items: center;
+    padding: 0;
+    }
+   
 }
 
 header{
@@ -82,19 +99,19 @@ nav{
 
     align-items: center;
 }
-
-#nav-contant{
-    display: flex;
-    justify-content: space-around;
-    min-width: 40%;
-    align-items: center;
-    padding: 0;
+#bars{
+    background-color: none;
+    border: none;
+    width: 50px;
+    height: 50px;
 }
+
 .lista{
     border-radius: 5px;
     padding: 5px;
     transform: scale(1);
     transition: all 1s ease;
+    z-index: 3;
 }
 .lista:hover{
     
@@ -104,12 +121,49 @@ nav{
     transition: all 1s ease;
 
 }
-.lista:hover:after{
-    background-color: red;
-    transform: scale(1);
-    transition: all 1s ease;
-}
+.head{
+    margin: 0 15vw;
+    display: flex;
+    justify-content: space-between;
 
+} 
+
+
+/*screennnn*/
+#screen{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgb(15, 26, 48);
+    width: 100vw;
+    height: 100vh;
+}
+#screen ul{
+    text-align: center;
+    padding: 0;
+    margin-top: 100px;
+}
+#screen li{
+    font-size: 25px;
+    margin-top: 60px;
+}
+#screen-container{
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    
+}
+#screen-container button{
+    width: 50px;
+    height: 50px;
+    background-color: inherit;
+    border: none;
+}
+#screen-container img{
+    width: 100%;
+
+
+}
 
 /*conteudo*/
 .seeMore{
@@ -124,16 +178,18 @@ main{
     color: rgb(234, 240, 255);;
     font-weight: bold;
 }
-
-.head{
-    margin: 0 15vw;
-    display: flex;
-    justify-content: space-between;
+/*sections*/
+.space{
 
 }
+.void{
+    display: none;
+}
+
+/*HOME*/
+
 #home{
-    margin-top: 10vw ;
-    
+    margin-top: 5vw ;
 }
 
 
