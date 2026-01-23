@@ -118,6 +118,7 @@ nav{
 
 
 /*screennnn*/
+
 #screen{
     position: absolute;
     inset: 0;
@@ -163,13 +164,12 @@ main{
 }
 
 .link{
+    margin-bottom: 30px;
     color: rgb(234, 240, 255);;
     font-weight: bold;
 }
 /*sections*/
-.space{
 
-}
 .void{
     display: none;
     
@@ -228,7 +228,7 @@ main{
     text-align: center;
     position: relative;       /* referência do overlay */
     max-width: 600px;
-    margin: 50px auto;
+    margin: 40px auto;
     
 }
 .resume-container img{

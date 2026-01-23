@@ -53,7 +53,8 @@ function ShowSection(listClicked){
 	});
 
 	document.getElementById(WhichListClicked).classList.add('active','checked')
-	
+	window.scrollTo(0, 0)
+
 
 	
 }
