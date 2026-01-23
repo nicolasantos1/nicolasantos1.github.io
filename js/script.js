@@ -1,98 +1,59 @@
 
 
-let btnsNav = document.querySelectorAll('.lista');
 
-btnsNav.forEach(function(btn){
-  btn.addEventListener('click', (element) => {
+let btnBars = document.getElementById('bars')
+	btnBars.addEventListener('click',function(){
 
-    let subId = "nav-";
-
-    let idname = element.currentTarget.id; 
-    // ou: let idname = btn.id;
-
-	let result = idname.startsWith(subId)
-		? idname.slice(subId.length)
-		: idname;
-    show(result);
-  });
-});
-
-
-
-function show(eleSec) {
-	
-	document.querySelectorAll("section").forEach(eleSec => eleSec.classList.add('void'));
-	document.getElementById(eleSec).classList.remove('void');
-
-	navegation(eleSec);
-}
-
-function navegation(section){
-	
-	if (document.getElementById('screen').style.display == 'block') {
-		document.getElementById('screen').style.display = 'none'
-	
-		let PlscreenNav = document.getElementById('nav-contant')
-		document.querySelectorAll('.lista').forEach(function(element){
-			element.style.display = 'block'
-			PlscreenNav.appendChild(element)
-			
+		document.querySelectorAll('.navegation').forEach(function(el){
+			let place = document.getElementById('screen-nav')
+			place.appendChild(el)
 		})
-		PlscreenNav.children[0].style.display = "none"
-	}
 
-	let btnbar = document.getElementById('bars')
-
-	if(btnbar.style.display != 'none'){return}
-
-	document.querySelectorAll('.lista').forEach( function(element){
-		element.style.display = 'block'
-	} )
-	
-	const item = document.getElementById('nav-' + section);
-	if (item) {
-		item.style.display = "none";
-	}
-	
-}
-
-let btnbar = document.getElementById('bars')
-	btnbar.addEventListener('click', ()=>{
-		document.getElementById('screen').classList.remove('void')
-		console.log('lido');
-
-		let PlscreenNav = document.getElementById('screen-nav')
-
-		document.querySelectorAll('.lista').forEach(function(element){
-			element.style.display = 'block'
-			PlscreenNav.appendChild(element)
+		document.getElementById('screen').classList.replace('void', 'active')
+		document.querySelectorAll('.spaces').forEach(function(element){
+			element.classList.replace('active','void')
+			
 		})
 		
 	})
 
-let btnCloseBar = document.getElementById('screen-btn')
-	btnCloseBar.addEventListener('click',function closeBar(){
-		document.getElementById('screen').classList.add('void')
-	
-		let PlscreenNav = document.getElementById('nav-contant')
-		document.querySelectorAll('.lista').forEach(function(element){
-			element.style.display = 'block'
-			PlscreenNav.appendChild(element)
-			
-		})
-		PlscreenNav.children[0].style.display = "none"
-		 
+let btnCloseBars = document.getElementById('screen-btn')
+	btnCloseBars.addEventListener('click', Closebars)
+
+function Closebars(){
+	document.querySelectorAll('.navegation').forEach(function(el,index){
+		if(index == 0){
+			let placeh1 = document.getElementById('place-nav-home')
+			placeh1.appendChild(el)
+			return
+		}
+		let place = document.getElementById('nav-contant')
+		place.appendChild(el)
 	})
 
-let btnHome = document.getElementById('home-icon')
-	btnHome.addEventListener('click', function (params) {
-		
+
+	document.getElementById('screen').classList.replace('active','void')
+	document.querySelector('.checked').classList.replace('void','active')
+
+}
+
+
+let btnsList = document.querySelectorAll('.list')
+	btnsList.forEach(function(element){
+		element.addEventListener('click', ShowSection )
 	})
-/* 
-document.getElementById("btnDownload").addEventListener("click", () => { 
-    const link = document.createElement("a");
-    link.href = "file/Currículo - Nicolas Santos Do Nascimento.pdf"; // caminho ou URL do arquivo
-    link.download = "Currículo - Nicolas Santos Do Nascimento"; // nome do arquivo
-    link.click();
-});
-*/
+
+function ShowSection(listClicked){
+	Closebars()
+	let WhichListClicked = listClicked.currentTarget.dataset.target;
+	
+	document.querySelectorAll('.spaces').forEach(el => {
+		el.classList.remove('active','checked');
+		el.classList.add('void');
+	});
+
+	document.getElementById(WhichListClicked).classList.add('active','checked')
+	
+
+	
+}

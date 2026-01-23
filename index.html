@@ -22,10 +22,11 @@
 <body>
 <div id="formatacao">
     <header>
-        <div class="head">
-            
-            <h1>
-                <a id="home-icon" onclick="show('home')">Home</a>
+        <div class="head"> 
+            <h1 id="place-nav-home">
+                <li class="list navegation home active" id="nav-home" data-target="home">
+                    <a>HOME</a>
+                </li>
             </h1>
             <div class="void" id="screen">
                 <div id="screen-container">
@@ -37,18 +38,16 @@
                    
                 </ul>
             </div>
-            <nav id="nav ">
+            <nav id="nav">
                 <ul id="nav-contant">
-                    <li class="lista home void" id="nav-home" >
-                        <a>Home</a>
-                    </li>
-                    <li class="lista about" id="nav-about">
+                    
+                    <li class="list navegation about" id="nav-about" data-target="about">
                         <a>About</a>
                     </li>
-                    <li class="lista project" id="nav-projects">
+                    <li class="list navegation project" id="nav-projects" data-target="project">
                         <a>Projects</a>
                     </li>
-                    <li class="lista resume" id="nav-resume">
+                    <li class="list navegation resume" id="nav-resume" data-target="resume">
                         <a> Resume </a>
                     </li>
                 </ul>
@@ -59,7 +58,7 @@
             </nav>
         </div>    
     </header>
-    <section class="spaces" id="home" >
+    <section class="spaces active checked" id="home" >
         <main>
                 <h1 id="name">
                     I'M NICOLAS SANTOS          
@@ -67,7 +66,7 @@
                 <p>
                     Developer currently building projects with HTML, CSS, and JavaScript to create modern, responsive, and interactive web interfaces. Alongside front-end development, I am also expanding my knowledge in back-end technologies, focusing on databases and server-side logic, with the goal of becoming a full-stack developer.
                 </p>
-                <a class="seeMore link" onclick="show('about')">
+                <a class="link list about" id="nav-about" data-target="about" >
                   See more about me ->
                 </a>
         </main>
@@ -85,12 +84,12 @@
             </p>
            
            
-            <a class="seeMore" onclick="show('projects')">
+            <a class="link list project" id="nav-projects" data-target="project" >
                 See projects ->
             </a>
         </main>
     </section>
-    <section class="spaces void" id="projects">
+    <section class="spaces void" id="project">
         <main id="content-projects">
 
             <h1>Projects</h1>
@@ -111,7 +110,7 @@
             </div>
         </main>
     </section>
-    <section class="spaces void" id="resume" screen-container">
+    <section class="spaces void" id="resume">
         <main>
           
             <h1>

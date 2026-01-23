@@ -45,8 +45,8 @@ p{
 /*header*/
 @media (max-width: 629px){
     
-    .lista{   
-        display: none;
+    .list{   
+        display: block;
     }
     #bars-img  {   
         width: 100%;
@@ -74,11 +74,11 @@ p{
         display: none;
     }
     #nav-contant{
-    display: flex;
-    justify-content: space-around;
-    min-width: 40%;
-    align-items: center;
-    padding: 0;
+        display: flex;
+        justify-content: space-around;
+        min-width: 40%;
+        align-items: center;
+        padding: 0;
     }
    
 }
@@ -106,21 +106,9 @@ nav{
     height: 50px;
 }
 
-.lista{
-    border-radius: 5px;
-    padding: 5px;
-    transform: scale(1);
-    transition: all 1s ease;
-    z-index: 3;
-}
-.lista:hover{
-    
-    background-color: rgba(255, 255, 255, 0.377);
-    color: white;
-    transform: scale(1);
-    transition: all 1s ease;
 
-}
+
+
 .head{
     margin: 0 15vw;
     display: flex;
@@ -184,6 +172,11 @@ main{
 }
 .void{
     display: none;
+    
+}
+.active{
+    display: block;
+    
 }
 
 /*HOME*/
