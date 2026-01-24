@@ -39,7 +39,7 @@ h1,h2{
 }
 p{
     line-height: 2;
-    letter-spacing: 0,5px;
+    letter-spacing: 0.2px;
 }
 
 /*header*/
@@ -66,6 +66,9 @@ p{
         display: none;
 
     }   
+    main{
+        max-width: 75%;
+    }
     
 }
 @media (min-width: 630px) {
@@ -80,7 +83,9 @@ p{
         align-items: center;
         padding: 0;
     }
-   
+    main{
+        max-width: 60%;
+    }
 }
 
 header{
@@ -120,7 +125,7 @@ nav{
 /*screennnn*/
 
 #screen{
-    position: absolute;
+    position: fixed;
     inset: 0;
     z-index: 1;
     background-color: rgb(15, 26, 48);
@@ -155,18 +160,20 @@ nav{
 }
 
 /*conteudo*/
+main{
+    margin: auto;
+}
+
 .seeMore{
     padding: 0 0 30px 0;
 }
-main{
-    margin: auto;
-    max-width: 60%;
-}
 
 .link{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: rgb(234, 240, 255);;
     font-weight: bold;
+    text-decoration: underline;
+
 }
 /*sections*/
 
@@ -192,23 +199,29 @@ main{
 }
 #projects h1{
     margin: 15px;
+    font-weight: 300;
+    font-size: 3rem;
+
+}
+#break{
+    font-size: 1rem;
+    font-weight: 200;
 }
 #table{
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .space-pic{
 
-    width: 200px + 2vw;
+    width: auto;
     margin: 1vw;
-    
-    
 }
 .pictures{
     
     border-radius: 10px;
     width: 100%;
-    min-width: 180px;
+    min-width: 120px;
 }
 
 
