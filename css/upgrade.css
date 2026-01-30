@@ -1,39 +1,90 @@
+::selection {
+  background: #5c5c5c62; /* cor do fundo da seleção */
+  color: #ffffff;      /* cor do texto selecionado */
+}
 body{
     
-    background-color: rgb(15, 26, 48);
-    color: rgb(192, 201, 223);
+    color: rgb(194, 200, 216);
     margin: 0;
     font-weight: 400;
     font-size: 18px;
     font-family: 'Roboto';
+    min-height: 100vh;
+    background: radial-gradient(
+      circle at 25% 30%,
+      rgba(2, 154, 255, 0.171),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 65% 70%,
+      rgba(75, 30, 236, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(0, 240, 220, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(2, 40, 255, 0.24),
+      transparent 40%
+    ), 
+    linear-gradient(
+      
+      rgb(255, 255, 255)
+    );
+   
 }
+.darkbody{
+    background: radial-gradient(
+      circle at 25% 30%,
+      rgba(2, 154, 255, 0.171),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 65% 70%,
+      rgba(75, 30, 236, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(0, 240, 220, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(2, 40, 255, 0.24),
+      transparent 40%
+    ), 
+    linear-gradient(
+      
+      rgb(15, 26, 48)
+    );
+}
+
 
 li{
     list-style: none;
-    
 }
-
 a:hover{
     cursor: pointer;
 }
 a{  
-
     padding: 5px;
     width: 100%;
     color: inherit;
     text-decoration: none;
 }
-
 #name{
     
   font-weight: 500;
   font-style: normal;
   
 }
-h1,h2{  
+.title{  
 
-    font-family: 'Poppins';
-
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     color: rgb(234, 240, 255);
 }
@@ -87,7 +138,6 @@ p{
         max-width: 60%;
     }
 }
-
 header{
     padding: 40px 0;
     margin:auto;
@@ -95,14 +145,12 @@ header{
 }
 header h1{
     align-content: center;
-    
+    margin: 0 5px;    
 }
-header li{
-    margin: 0 5px;
-}
-nav{
-
+#nav{
     align-items: center;
+    display: flex;
+    justify-items: center;
 }
 #bars{
     background-color: none;
@@ -111,24 +159,54 @@ nav{
     height: 50px;
 }
 
+#mode-btn{
+    width: 35px;
+    height: 35px;
+}
+.btnMode{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
+.dark{
+   
+}
 
-
-.head{
-    margin: 0 15vw;
-    display: flex;
-    justify-content: space-between;
-
-} 
-
+.light{
+    filter: invert(1);
+    
+}
 
 /*screennnn*/
-
 #screen{
     position: fixed;
     inset: 0;
     z-index: 1;
-    background-color: rgb(15, 26, 48);
+    background: radial-gradient(
+        circle at 25% 30%,
+        rgba(2, 154, 255, 0.171),
+        transparent 40%
+        ),
+        radial-gradient(
+        circle at 65% 70%,
+        rgba(75, 30, 236, 0.15),
+        transparent 40%
+        ),
+        radial-gradient(
+        circle at 75% 30%,
+        rgba(0, 240, 220, 0.15),
+        transparent 40%
+        ),
+        radial-gradient(
+        circle at 20% 80%,
+        rgba(2, 40, 255, 0.24),
+        transparent 40%
+        ), 
+        linear-gradient(
+        
+        rgb(15, 26, 48)
+        );
     width: 100vw;
     height: 100vh;
 }
@@ -159,15 +237,34 @@ nav{
 
 }
 
-/*conteudo*/
+/*========================estilização*/
+.dev h1{
+    font-family: "Rubik Glitch", system-ui;
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    font-weight: 10;
+    font-size: 20vw;
+    color: rgb(194, 194, 194);
+    opacity: 0.05;
+    margin: 0;
+}
+
+/*=====================header*/
+.head{
+    margin: 0 15vw;
+    display: flex;
+    justify-content: space-between;
+
+} 
+
+/*=============conteudo*/
 main{
     margin: auto;
 }
-
 .seeMore{
     padding: 0 0 30px 0;
 }
-
 .link{
     margin-bottom: 40px;
     color: rgb(234, 240, 255);;
@@ -175,8 +272,7 @@ main{
     text-decoration: underline;
 
 }
-/*sections*/
-
+/*================sections*/
 .void{
     display: none;
     
@@ -186,22 +282,15 @@ main{
     
 }
 
-/*HOME*/
-
+/*===============HOME*/
 #home{
     margin-top: 5vw ;
 }
-
-
-/*Projetcs only*/
-#projects{
-    
-}
+/*===============Projects only*/
 #projects h1{
     margin: 15px;
     font-weight: 300;
     font-size: 3rem;
-
 }
 #break{
     font-size: 1rem;
@@ -224,32 +313,19 @@ main{
     min-width: 120px;
 }
 
-
 /*Resume*/
-#resume{
-    
+#resume{   
     justify-content: center;
-    margin: auto;
-    
-    height: auto;   
-    
+    margin: auto; 
+    height: auto;      
 }
-
-
-
 .resume-container{
     text-align: center;
     position: relative;       /* referência do overlay */
-    max-width: 600px;
-    margin: 40px auto;
-    
+    max-width: 500px;
+    margin: 40px auto;   
 }
 .resume-container img{
     width: 100%;
-    display: block;
+    object-fit: contain;
 }
-
-/*   
-transform: scale(1);
-transition: all 1s ease;
-

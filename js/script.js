@@ -1,4 +1,14 @@
-
+let darkMode = document.getElementById('mode-btn')
+	darkMode.addEventListener('click', function(){
+		document.querySelector('body').classList.toggle('darkbody')
+		document.querySelectorAll('.dark,.light').forEach(function(el){
+			el.classList.toggle('dark')
+			el.classList.toggle('light')
+		})
+		
+		console.log('foi');
+		
+})
 
 
 let btnBars = document.getElementById('bars')
