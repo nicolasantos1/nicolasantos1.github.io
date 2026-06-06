@@ -1,331 +1,300 @@
 ::selection {
-  background: #5c5c5c62; /* cor do fundo da seleção */
-  color: #ffffff;      /* cor do texto selecionado */
+   background: #5c5c5c62; /* cor do fundo da seleção */
+   color: #ffffff; /* cor do texto selecionado */
 }
-body{
-    
-    color: rgb(194, 200, 216);
-    margin: 0;
-    font-weight: 400;
-    font-size: 18px;
-    font-family: 'Roboto';
-    min-height: 100vh;
-    background: radial-gradient(
-      circle at 25% 30%,
-      rgba(2, 154, 255, 0.171),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 65% 70%,
-      rgba(75, 30, 236, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 75% 30%,
-      rgba(0, 240, 220, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(2, 40, 255, 0.24),
-      transparent 40%
-    ), 
-    linear-gradient(
-      
-      rgb(255, 255, 255)
-    );
-   
+body {
+   color: rgb(194, 200, 216);
+   margin: 0;
+   font-weight: 400;
+   font-size: 18px;
+   font-family: "Roboto";
+   min-height: 100vh;
+   background:
+      radial-gradient(
+         circle at 25% 30%,
+         rgba(2, 154, 255, 0.171),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 65% 70%,
+         rgba(75, 30, 236, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 75% 30%,
+         rgba(0, 240, 220, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 20% 80%,
+         rgba(2, 40, 255, 0.24),
+         transparent 40%
+      ),
+      linear-gradient(rgb(255, 255, 255));
 }
-.darkbody{
-    background: radial-gradient(
-      circle at 25% 30%,
-      rgba(2, 154, 255, 0.171),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 65% 70%,
-      rgba(75, 30, 236, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 75% 30%,
-      rgba(0, 240, 220, 0.15),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(2, 40, 255, 0.24),
-      transparent 40%
-    ), 
-    linear-gradient(
-      
-      rgb(15, 26, 48)
-    );
+.darkbody {
+   background:
+      radial-gradient(
+         circle at 25% 30%,
+         rgba(2, 154, 255, 0.171),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 65% 70%,
+         rgba(75, 30, 236, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 75% 30%,
+         rgba(0, 240, 220, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 20% 80%,
+         rgba(2, 40, 255, 0.24),
+         transparent 40%
+      ),
+      linear-gradient(rgb(15, 26, 48));
 }
 
-
-li{
-    list-style: none;
+li {
+   list-style: none;
 }
-a:hover{
-    cursor: pointer;
+a:hover {
+   cursor: pointer;
 }
-a{  
-    padding: 5px;
-    width: 100%;
-    color: inherit;
-    text-decoration: none;
+a {
+   padding: 5px;
+   width: 100%;
+   color: inherit;
+   text-decoration: none;
 }
-#name{
-    
-  font-weight: 500;
-  font-style: normal;
-  
+#name {
+   font-weight: 500;
+   font-style: normal;
 }
-.title{  
-
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    color: rgb(234, 240, 255);
+.title {
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   color: rgb(234, 240, 255);
 }
-p{
-    line-height: 2;
-    letter-spacing: 0.2px;
+p {
+   line-height: 2;
+   letter-spacing: 0.2px;
 }
 
 /*header*/
-@media (max-width: 629px){
-    
-    .list{   
-        display: block;
-    }
-    #bars-img  {   
-        width: 100%;
-        background-color: none;
-    }
-    #bars{
-        background-color: rgba(0, 0, 0, 0);
-        display: block;
-        width: 50px;        
-        height: 50px;
-        object-fit: contain;
-    }
-    #nav{
-        align-content: center;
-    }
-    #nav-contant{
-        display: none;
-
-    }   
-    main{
-        max-width: 75%;
-    }
-    
+@media (max-width: 629px) {
+   .list {
+      display: block;
+   }
+   #bars-img {
+      width: 100%;
+      background-color: none;
+   }
+   #bars {
+      background-color: rgba(0, 0, 0, 0);
+      display: block;
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+   }
+   #nav {
+      align-content: center;
+   }
+   #nav-contant {
+      display: none;
+   }
+   main {
+      max-width: 75%;
+   }
 }
 @media (min-width: 630px) {
-    
-    #bars{
-        display: none;
-    }
-    #nav-contant{
-        display: flex;
-        justify-content: space-around;
-        min-width: 40%;
-        align-items: center;
-        padding: 0;
-    }
-    main{
-        max-width: 60%;
-    }
+   #bars {
+      display: none;
+   }
+   #nav-contant {
+      display: flex;
+      justify-content: space-around;
+      min-width: 40%;
+      align-items: center;
+      padding: 0;
+   }
+   main {
+      max-width: 60%;
+   }
 }
-header{
-    padding: 40px 0;
-    margin:auto;
-    
+header {
+   padding: 40px 0;
+   margin: auto;
 }
-header h1{
-    align-content: center;
-    margin: 0 5px;    
+header h1 {
+   align-content: center;
+   margin: 0 5px;
 }
-#nav{
-    align-items: center;
-    display: flex;
-    justify-items: center;
+#nav {
+   align-items: center;
+   display: flex;
+   justify-items: center;
 }
-#bars{
-    background-color: none;
-    border: none;
-    width: 50px;
-    height: 50px;
+#bars {
+   background-color: none;
+   border: none;
+   width: 50px;
+   height: 50px;
 }
 
-#mode-btn{
-    width: 35px;
-    height: 35px;
+#mode-btn {
+   width: 35px;
+   height: 35px;
 }
-.btnMode{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.dark{
-   
+.btnMode {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
 }
 
-.light{
-    filter: invert(1);
-    
+.light {
+   filter: invert(1);
 }
 
 /*screennnn*/
-#screen{
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    background: radial-gradient(
-        circle at 25% 30%,
-        rgba(2, 154, 255, 0.171),
-        transparent 40%
-        ),
-        radial-gradient(
-        circle at 65% 70%,
-        rgba(75, 30, 236, 0.15),
-        transparent 40%
-        ),
-        radial-gradient(
-        circle at 75% 30%,
-        rgba(0, 240, 220, 0.15),
-        transparent 40%
-        ),
-        radial-gradient(
-        circle at 20% 80%,
-        rgba(2, 40, 255, 0.24),
-        transparent 40%
-        ), 
-        linear-gradient(
-        
-        rgb(15, 26, 48)
-        );
-    width: 100vw;
-    height: 100vh;
+#screen {
+   position: fixed;
+   inset: 0;
+   z-index: 1;
+   background:
+      radial-gradient(
+         circle at 25% 30%,
+         rgba(2, 154, 255, 0.171),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 65% 70%,
+         rgba(75, 30, 236, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 75% 30%,
+         rgba(0, 240, 220, 0.15),
+         transparent 40%
+      ),
+      radial-gradient(
+         circle at 20% 80%,
+         rgba(2, 40, 255, 0.24),
+         transparent 40%
+      ),
+      linear-gradient(rgb(15, 26, 48));
+   width: 100vw;
+   height: 100vh;
 }
-#screen ul{
-    text-align: center;
-    padding: 0;
-    margin-top: 100px;
+#screen ul {
+   text-align: center;
+   padding: 0;
+   margin-top: 100px;
 }
-#screen li{
-    font-size: 25px;
-    margin-top: 60px;
+#screen li {
+   font-size: 25px;
+   margin-top: 60px;
 }
-#screen-container{
-    position: absolute;
-    top: 60px;
-    right: 60px;
-    
+#screen-container {
+   position: absolute;
+   top: 60px;
+   right: 60px;
 }
-#screen-container button{
-    width: 50px;
-    height: 50px;
-    background-color: inherit;
-    border: none;
+#screen-container button {
+   width: 50px;
+   height: 50px;
+   background-color: inherit;
+   border: none;
 }
-#screen-container img{
-    width: 100%;
-
-
+#screen-container img {
+   width: 100%;
 }
 
 /*========================estilização*/
-.dev h1{
-    font-family: "Rubik Glitch", system-ui;
-    position: fixed;
-    bottom: 20px;
-    left: 50px;
-    font-weight: 10;
-    font-size: 20vw;
-    color: rgb(194, 194, 194);
-    opacity: 0.05;
-    margin: 0;
+.dev h1 {
+   font-family: "Rubik Glitch", system-ui;
+   position: fixed;
+   bottom: 20px;
+   left: 50px;
+   font-weight: 10;
+   font-size: 20vw;
+   color: rgb(194, 194, 194);
+   opacity: 0.05;
+   margin: 0;
 }
 
 /*=====================header*/
-.head{
-    margin: 0 15vw;
-    display: flex;
-    justify-content: space-between;
-
-} 
+.head {
+   margin: 0 15vw;
+   display: flex;
+   justify-content: space-between;
+}
 
 /*=============conteudo*/
-main{
-    margin: auto;
+main {
+   margin: auto;
 }
-.seeMore{
-    padding: 0 0 30px 0;
+.seeMore {
+   padding: 0 0 30px 0;
 }
-.link{
-    margin-bottom: 40px;
-    color: rgb(234, 240, 255);;
-    font-weight: bold;
-    text-decoration: underline;
-
+.link {
+   margin-bottom: 40px;
+   color: rgb(234, 240, 255);
+   font-weight: bold;
+   text-decoration: underline;
 }
 /*================sections*/
-.void{
-    display: none;
-    
+.void {
+   display: none;
 }
-.active{
-    display: block;
-    
+.active {
+   display: block;
 }
 
 /*===============HOME*/
-#home{
-    margin-top: 5vw ;
+#home {
+   margin-top: 5vw;
 }
 /*===============Projects only*/
-#projects h1{
-    margin: 15px;
-    font-weight: 300;
-    font-size: 3rem;
+#projects h1 {
+   margin: 15px;
+   font-weight: 300;
+   font-size: 3rem;
 }
-#break{
-    font-size: 1rem;
-    font-weight: 200;
+#break {
+   font-size: 1rem;
+   font-weight: 200;
 }
-#table{
-    margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+#table {
+   margin-bottom: 40px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.space-pic{
-
-    width: auto;
-    margin: 1vw;
+.space-pic {
+   width: auto;
+   margin: 1vw;
 }
-.pictures{
-    
-    border-radius: 10px;
-    width: 100%;
-    min-width: 120px;
+.pictures {
+   border-radius: 10px;
+   width: 100%;
+   min-width: 120px;
 }
 
 /*Resume*/
-#resume{   
-    justify-content: center;
-    margin: auto; 
-    height: auto;      
+#resume {
+   justify-content: center;
+   margin: auto;
+   height: auto;
 }
-.resume-container{
-    text-align: center;
-    position: relative;       /* referência do overlay */
-    max-width: 500px;
-    margin: 40px auto;   
+.resume-container {
+   text-align: center;
+   position: relative; /* referência do overlay */
+   max-width: 500px;
+   margin: 40px auto;
 }
-.resume-container img{
-    width: 100%;
-    object-fit: contain;
+.resume-container img {
+   width: 100%;
+   object-fit: contain;
 }

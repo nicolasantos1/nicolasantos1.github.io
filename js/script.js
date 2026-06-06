@@ -1,70 +1,69 @@
-let darkMode = document.getElementById('mode-btn')
-	darkMode.addEventListener('click', function(){
-		document.querySelector('body').classList.toggle('darkbody')
-		document.querySelectorAll('.dark,.light').forEach(function(el){
-			el.classList.toggle('dark')
-			el.classList.toggle('light')
-		})
-		
-		console.log('foi');
-		
-})
+let darkMode = document.getElementById("mode-btn");
+darkMode.addEventListener("click", function () {
+   document.querySelector("body").classList.toggle("darkbody");
+   document.querySelectorAll(".dark,.light").forEach(function (el) {
+      el.classList.toggle("dark");
+      el.classList.toggle("light");
+   });
 
+   console.log("foi");
+});
 
-let btnBars = document.getElementById('bars')
-	btnBars.addEventListener('click',function(){
+let btnBars = document.getElementById("bars");
+btnBars.addEventListener("click", function () {
+   document.querySelectorAll(".navegation").forEach(function (el) {
+      let place = document.getElementById("screen-nav");
+      place.appendChild(el);
+   });
 
-		document.querySelectorAll('.navegation').forEach(function(el){
-			let place = document.getElementById('screen-nav')
-			place.appendChild(el)
-		})
+   document.getElementById("screen").classList.replace("void", "active");
+   document.querySelectorAll(".spaces").forEach(function (element) {
+      element.classList.replace("active", "void");
+   });
+});
 
-		document.getElementById('screen').classList.replace('void', 'active')
-		document.querySelectorAll('.spaces').forEach(function(element){
-			element.classList.replace('active','void')
-			
-		})
-		
-	})
+let btnCloseBars = document.getElementById("screen-btn");
+btnCloseBars.addEventListener("click", Closebars);
 
-let btnCloseBars = document.getElementById('screen-btn')
-	btnCloseBars.addEventListener('click', Closebars)
+function Closebars() {
+   document.querySelectorAll(".navegation").forEach(function (el, index) {
+      if (index == 0) {
+         let placeh1 = document.getElementById("place-nav-home");
+         placeh1.appendChild(el);
+         return;
+      }
+      let place = document.getElementById("nav-contant");
+      place.appendChild(el);
+   });
 
-function Closebars(){
-	document.querySelectorAll('.navegation').forEach(function(el,index){
-		if(index == 0){
-			let placeh1 = document.getElementById('place-nav-home')
-			placeh1.appendChild(el)
-			return
-		}
-		let place = document.getElementById('nav-contant')
-		place.appendChild(el)
-	})
+   document.getElementById("screen").classList.replace("active", "void");
+   document.querySelector(".checked").classList.replace("void", "active");
+}
 
+let btnsList = document.querySelectorAll(".list");
+btnsList.forEach(function (element) {
+   element.addEventListener("click", ShowSection);
+});
 
-	document.getElementById('screen').classList.replace('active','void')
-	document.querySelector('.checked').classList.replace('void','active')
+function ShowSection(listClicked) {
+   Closebars();
+   let WhichListClicked = listClicked.currentTarget.dataset.target;
 
+   document.querySelectorAll(".spaces").forEach((el) => {
+      el.classList.remove("active", "checked");
+      el.classList.add("void");
+   });
+
+   document.getElementById(WhichListClicked).classList.add("active", "checked");
+   window.scrollTo(0, 0);
 }
 
 
-let btnsList = document.querySelectorAll('.list')
-	btnsList.forEach(function(element){
-		element.addEventListener('click', ShowSection )
-	})
 
-function ShowSection(listClicked){
-	Closebars()
-	let WhichListClicked = listClicked.currentTarget.dataset.target;
-	
-	document.querySelectorAll('.spaces').forEach(el => {
-		el.classList.remove('active','checked');
-		el.classList.add('void');
-	});
-
-	document.getElementById(WhichListClicked).classList.add('active','checked')
-	window.scrollTo(0, 0)
-
-
-	
+class card {
+   constructor(title) {
+      this.title = title;
+      this.height = 20;
+      this.width = 20;
+   }
 }

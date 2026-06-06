@@ -1,163 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Portfólio</title>
-    <link rel="icon" href="./file/Logo.png">
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/upgrade.css">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home | Portfólio</title>
+      <link rel="icon" href="./file/Logo.png" />
+      <script src="js/script.js" defer></script>
+      <link rel="stylesheet" href="css/upgrade.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet"
+      />
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet"
+      />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap"
+         rel="stylesheet"
+      />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
-
-</head>
-<body class="darkbody">
-<div id="formatacao">
-    <div>
-        <div class="dev dark">
-        </div>
-    </div>
-    <header class="dark">
-        <div class="head"> 
-            <h1 id="place-nav-home">
-                <li class="list navegation home active" id="nav-home" data-target="home">
-                    <a>NI</a>
-                </li>
-            </h1>
-            <div class="void" id="screen">
-                <div id="screen-container">
-                    <button id="screen-btn">
-                        <img src="file/Close_btn.png" alt="">
-                    </button>
-                </div>
-                <ul id="screen-nav">
-                   
-                </ul>
-            </div>
-            <nav id="nav">
-                <ul id="nav-contant">
-                    
-                    <li class="list navegation about" id="nav-about" data-target="about">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body class="darkbody">
+      <div id="formatacao">
+         <div>
+            <div class="dev dark"></div>
+         </div>
+         <header class="dark">
+            <div class="head">
+               <h1 id="place-nav-home">
+                  <li
+                     class="list navegation home active"
+                     id="nav-home"
+                     data-target="home"
+                  >
+                     <a>NI</a>
+                  </li>
+               </h1>
+               <div class="void" id="screen">
+                  <div id="screen-container">
+                     <button id="screen-btn">
+                        <img src="file/Close_btn.png" alt="" />
+                     </button>
+                  </div>
+                  <ul id="screen-nav"></ul>
+               </div>
+               <nav id="nav">
+                  <ul id="nav-contant">
+                     <li
+                        class="list navegation about"
+                        id="nav-about"
+                        data-target="about"
+                     >
                         <a>Sobre</a>
-                    </li>
-                    <li class="list navegation project" id="nav-projects" data-target="project">
+                     </li>
+                     <li
+                        class="list navegation project"
+                        id="nav-projects"
+                        data-target="project"
+                     >
                         <a>Projetos</a>
-                    </li>
-                    <li class="list navegation resume" id="nav-resume" data-target="resume">
+                     </li>
+                     <li
+                        class="list navegation resume"
+                        id="nav-resume"
+                        data-target="resume"
+                     >
                         <a>Resumo</a>
-                    </li>
-                </ul>
-                <li id="mode-btn">
-                    <img class="btnMode" src="file/Contrast.png" alt="Contrast" >
-                </li>
-                <button id="bars">
-                    <img id="bars-img" src="file/Menu_btn.png" alt="">
-                </button>
-            </nav>
-        </div>    
-    </header>
-    <section class="spaces active checked dark" id="home" >
-        <main>
-                <h1 id="name" class="title">
-                    NICOLAS SANTOS          
-                </h1>
-                <p>
-                    Sou desenvolvedor e atualmente estou criando projetos com HTML, CSS e JavaScript para desenvolver interfaces web modernas, responsivas e interativas. Além do desenvolvimento front-end, também estou expandindo meu conhecimento em tecnologias back-end, com foco em bancos de dados e lógica do lado do servidor, com o objetivo de me tornar um desenvolvedor full-stack.               
-                </p>
-                <a class="link list about" id="nav-about" data-target="about" >
-                    Ver mais sobre mim ->
-                </a>
-        </main>
-    </section>
-    <section class="spaces void dark" id="about" >
-        <main id="about-content">
-            <h1 class="title">
-                Sobre mim.
-            </h1>
-            <p>
-                Minha jornada na programação começou a partir do interesse em desenvolver jogos. Inicialmente, busquei aprender conceitos fundamentais como lógica de programação, o que me levou a criar meus primeiros projetos de forma prática.
-                
-            </p>
-            <p>  
-                Minha primeira experiência foi com o Construct 3, uma plataforma que permite aplicar lógica de programação sem a necessidade de escrever código. Esse contato inicial foi essencial para compreender conceitos como variáveis, eventos, condições e estrutura de sistemas.
-            </p>
-            <p>
-                Com o tempo, busquei desafios maiores e passei a estudar a Unity, utilizando C# como linguagem principal. Através de tutoriais e projetos próprios, desenvolvi diferentes protótipos de jogos, explorando mecânicas, menus, sistemas de fases e lógica de gameplay. Apesar de ter criado vários projetos, limitações técnicas e de hardware na época me fizeram pausar esse caminho.
-            </p>
-            <p>
-                Foi então que decidi direcionar meu foco para o desenvolvimento web, onde comecei a estudar HTML, CSS e JavaScript. Nesse novo cenário, percebi que toda a base lógica adquirida no desenvolvimento de jogos foi fundamental para evoluir mais rápido e entender melhor a programação.
-            </p>
-            <p>
-                Atualmente, estou expandindo meus conhecimentos para o back-end, estudando conceitos como APIs, bancos de dados e integração entre sistemas, com o objetivo de me tornar um desenvolvedor mais completo.
-            </p>
-            <p>
-                Sigo em constante aprendizado, buscando aplicar boas práticas, explorar novas tecnologias e desenvolver projetos que gerem impacto real. Meu objetivo é crescer como desenvolvedor e criar soluções eficientes por meio da tecnologia.
-            </p>
-            <a class="link list project" id="nav-projects" data-target="project" >
-                Ver projetos ->
-            </a>
-        </main>
-    </section>
-    <section class="spaces void" id="project">
-        <main id="content-projects">
-            <h1 class="title dark">
-                Projetos<span id="break">(Em desenvolvimento)</span>
-            </h1>
-            <h3></h3>
-            <div id="table"> 
-                <div class="space-pic">
-                    <img class="pictures" src="file/Blocked.png"  alt="">
-                </div>
-                <div class="space-pic">
-                    <img class="pictures" src="file/Blocked.png"  alt="">
-                </div>
-                <div class="space-pic">
-                    <img class="pictures" src="file/Blocked.png"  alt="">
-                </div>
-                
-
+                     </li>
+                  </ul>
+                  <li id="mode-btn">
+                     <img
+                        class="btnMode"
+                        src="file/Contrast.png"
+                        alt="Contrast"
+                     />
+                  </li>
+                  <button id="bars">
+                     <img id="bars-img" src="file/Menu_btn.png" alt="" />
+                  </button>
+               </nav>
             </div>
-        </main>
-    </section>
-    <section class="spaces void" id="resume">
-        <main>
-            <div class="dark">
-                <h1 class="title">
-                    Currículo
-                </h1>
-               
-                <p>
-                    Clique no link para 
-                    <a class="link"  href="file/NicolasSantosDoNascimento.pdf" >visualizar</a>
-                    ou 
-                    <a class="link" href="file/NicolasSantosDoNascimento.pdf" download="NicolasSantosDoNascimento.pdf.pdf"> baixar</a>
-                    o currículo
-                </p>
+         </header>
+         <section class="spaces active checked dark" id="home">
+            <main>
+               <h1 id="name" class="title">NICOLAS SANTOS</h1>
+               <p>
+                  Sou desenvolvedor e atualmente estou criando projetos com
+                  HTML, CSS e JavaScript para desenvolver interfaces web
+                  modernas, responsivas e interativas. Além do desenvolvimento
+                  front-end, também estou expandindo meu conhecimento em
+                  tecnologias back-end, com foco em bancos de dados e lógica do
+                  lado do servidor, com o objetivo de me tornar um desenvolvedor
+                  full-stack.
+               </p>
+               <a class="link list about" id="nav-about" data-target="about">
+                  Ver mais sobre mim ->
+               </a>
+            </main>
+         </section>
+         <section class="spaces void dark" id="about">
+            <main id="about-content">
+               <h1 class="title">Sobre mim.</h1>
+               <p>
+                  Minha jornada na programação começou a partir do interesse em
+                  desenvolver jogos. Inicialmente, busquei aprender conceitos
+                  fundamentais como lógica de programação, o que me levou a
+                  criar meus primeiros projetos de forma prática.
+               </p>
+               <p>
+                  Minha primeira experiência foi com o Construct 3, uma
+                  plataforma que permite aplicar lógica de programação sem a
+                  necessidade de escrever código. Esse contato inicial foi
+                  essencial para compreender conceitos como variáveis, eventos,
+                  condições e estrutura de sistemas.
+               </p>
+               <p>
+                  Com o tempo, busquei desafios maiores e passei a estudar a
+                  Unity, utilizando C# como linguagem principal. Através de
+                  tutoriais e projetos próprios, desenvolvi diferentes
+                  protótipos de jogos, explorando mecânicas, menus, sistemas de
+                  fases e lógica de gameplay. Apesar de ter criado vários
+                  projetos, limitações técnicas e de hardware na época me
+                  fizeram pausar esse caminho.
+               </p>
+               <p>
+                  Foi então que decidi direcionar meu foco para o
+                  desenvolvimento web, onde comecei a estudar HTML, CSS e
+                  JavaScript. Nesse novo cenário, percebi que toda a base lógica
+                  adquirida no desenvolvimento de jogos foi fundamental para
+                  evoluir mais rápido e entender melhor a programação.
+               </p>
+               <p>
+                  Atualmente, estou expandindo meus conhecimentos para o
+                  back-end, estudando conceitos como APIs, bancos de dados e
+                  integração entre sistemas, com o objetivo de me tornar um
+                  desenvolvedor mais completo.
+               </p>
+               <p>
+                  Sigo em constante aprendizado, buscando aplicar boas práticas,
+                  explorar novas tecnologias e desenvolver projetos que gerem
+                  impacto real. Meu objetivo é crescer como desenvolvedor e
+                  criar soluções eficientes por meio da tecnologia.
+               </p>
+               <a
+                  class="link list project"
+                  id="nav-projects"
+                  data-target="project"
+               >
+                  Ver projetos ->
+               </a>
+            </main>
+         </section>
+         <section class="spaces void" id="project">
+            <main id="content-projects">
+               <h1 class="title dark">
+                  Projetos<span id="break">(Em desenvolvimento)</span>
+               </h1>
+               <h3></h3>
+               <div id="table">
+                  <div class="space-pic">
+                     <img class="pictures" src="file/Blocked.png" alt="" />
+                  </div>
+                  <div class="space-pic">
+                     <img class="pictures" src="file/Blocked.png" alt="" />
+                  </div>
+                  <div class="space-pic">
+                     <img class="pictures" src="file/Blocked.png" alt="" />
+                  </div>
+               </div>
+            </main>
+         </section>
+         <section class="spaces void" id="resume">
+            <main>
+               <div class="dark">
+                  <h1 class="title">Currículo</h1>
 
-            </div>
-            
-            <div class="resume-container">
-                <img src="file/NicolasSantosDoNascimento.jpg" alt="">    
-            </div>
+                  <p>
+                     Clique no link para
+                     <a class="link" href="file/NicolasSantosDoNascimento.pdf"
+                        >visualizar</a
+                     >
+                     ou
+                     <a
+                        class="link"
+                        href="file/NicolasSantosDoNascimento.pdf"
+                        download="NicolasSantosDoNascimento.pdf.pdf"
+                     >
+                        baixar</a
+                     >
+                     o currículo
+                  </p>
+               </div>
 
-        </main>
-    </section>
-    
-</div>
-</body>
+               <div class="resume-container">
+                  <img src="file/NicolasSantosDoNascimento.jpg" alt="" />
+               </div>
+            </main>
+         </section>
+      </div>
+   </body>
 </html>
