@@ -75,7 +75,7 @@ export default function Home() {
               alt="Logo de Nicolas Santos"
               width={88}
               height={88}
-              className="size-20 rounded-2xl shadow-2xl shadow-indigo-950/60 ring-1 ring-white/15"
+              className="size-20 roundemd-2xl shadow-2xl shadow-indigo-950/60 ring-1 ring-white/15"
             />
             <div>
               <p className="text-sm text-slate-400">Perfil</p>

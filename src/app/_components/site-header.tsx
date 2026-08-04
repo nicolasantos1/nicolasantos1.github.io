@@ -42,7 +42,7 @@ export function SiteHeader() {
             ))}
             <li>
               <a
-                href="/documents/curriculo-nicolas-santos.pdf"
+                href="/documents/NicolasSantosDoNascimento.pdf"
                 className="ml-1 inline-flex rounded-full border border-teal-300/40 px-4 py-2 font-medium text-teal-200 transition hover:border-teal-200 hover:bg-teal-300/10"
                 target="_blank"
                 rel="noreferrer"
