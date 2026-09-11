@@ -1,0 +1,65 @@
+::view-transition-old(.nav-forward) {
+  --slide-offset: -64px;
+  animation:
+    140ms ease-in both page-fade reverse,
+    360ms ease-in-out both page-slide reverse;
+}
+
+::view-transition-new(.nav-forward) {
+  --slide-offset: 64px;
+  animation:
+    200ms ease-out 140ms both page-fade,
+    360ms ease-in-out both page-slide;
+}
+
+::view-transition-old(.nav-back) {
+  --slide-offset: 64px;
+  animation:
+    140ms ease-in both page-fade reverse,
+    360ms ease-in-out both page-slide reverse;
+}
+
+::view-transition-new(.nav-back) {
+  --slide-offset: -64px;
+  animation:
+    200ms ease-out 140ms both page-fade,
+    360ms ease-in-out both page-slide;
+}
+
+@keyframes page-fade {
+  from {
+    filter: blur(3px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes page-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  ::view-transition-old(.nav-forward),
+  ::view-transition-new(.nav-forward),
+  ::view-transition-old(.nav-back),
+  ::view-transition-new(.nav-back) {
+    animation: none;
+  }
+}

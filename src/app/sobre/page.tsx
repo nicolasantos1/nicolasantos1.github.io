@@ -1,6 +1,7 @@
+import { skills } from "@/data/sobre";
 import type { Metadata } from "next";
-import { DirectionalLink } from "../_components/directional-link";
-import { PageTransition } from "../_components/page-transition";
+import { DirectionalLink } from "@/components/directional-link";
+import { PageTransition } from "@/components/page-transition";
 
 export const metadata: Metadata = {
   title: "Sobre | Nicolas Santos",
@@ -8,33 +9,19 @@ export const metadata: Metadata = {
   alternates: { canonical: "/sobre" },
 };
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Java",
-  "C#",
-  "MySQL",
-  "Git & GitHub",
-  "APIs REST",
-];
-
 export default function AboutPage() {
   return (
     <PageTransition>
       <div>
-      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:py-28">
+      <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:py-24">
         <div>
           <p className="section-kicker">Sobre mim</p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-4 text-balance text-4xl font-[510] tracking-tight text-white sm:text-5xl">
             Curiosidade virou caminho profissional.
           </h1>
         </div>
 
-        <div className="space-y-6 text-lg leading-8 text-slate-300">
+        <div className="space-y-6 text-lg leading-8 text-mist">
           <p>
             Minha jornada na programação começou pelo interesse em desenvolver
             jogos. Construct 3 apresentou lógica por eventos, variáveis e
@@ -55,31 +42,31 @@ export default function AboutPage() {
       </section>
 
       <section className="border-y border-white/8 bg-white/[0.025]">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-24">
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="surface p-6">
+        <div className="mx-auto max-w-[1200px] px-5 py-20 sm:px-8 lg:py-24">
+          <div className="grid gap-4 sm:grid-cols-1">
+            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-graphite py-6">
               <strong className="block text-3xl text-white">2021</strong>
-              <span className="mt-2 block text-sm text-slate-400">Início na tecnologia</span>
+              <span className="mt-2 block text-sm text-fog">Início na tecnologia</span>
             </div>
-            <div className="surface p-6">
+            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-graphite py-6">
               <strong className="block text-3xl text-white">2026</strong>
-              <span className="mt-2 block text-sm text-slate-400">Conclusão prevista ADS</span>
+              <span className="mt-2 block text-sm text-fog">Conclusão prevista ADS</span>
             </div>
-            <div className="surface p-6">
+            <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-graphite py-6">
               <strong className="block text-3xl text-white">PT · EN</strong>
-              <span className="mt-2 block text-sm text-slate-400">Inglês técnico intermediário</span>
+              <span className="mt-2 block text-sm text-fog">Inglês técnico intermediário</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:py-28">
+      <section className="mx-auto grid max-w-[1200px] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.75fr_1.25fr] lg:py-24">
         <div>
           <p className="section-kicker">Competências</p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-[510] tracking-tight text-white sm:text-4xl">
             Ferramentas que uso para construir e aprender.
           </h2>
-          <p className="mt-5 leading-7 text-slate-400">
+          <p className="mt-5 leading-7 text-fog">
             Base prática em frontend, lógica, banco de dados e versionamento.
           </p>
         </div>
@@ -88,7 +75,7 @@ export default function AboutPage() {
             {skills.map((skill) => (
               <li
                 key={skill}
-                className="rounded-full border border-white/10 bg-white/[0.045] px-5 py-3 text-sm font-medium text-slate-200"
+                className="rounded-full border border-white/10 bg-white/[0.045] px-5 py-3 text-sm font-[510] text-mist"
               >
                 {skill}
               </li>
@@ -96,7 +83,7 @@ export default function AboutPage() {
           </ul>
           <DirectionalLink
             href="/projetos"
-            className="mt-10 inline-flex items-center gap-2 font-semibold text-teal-200 transition hover:translate-x-1"
+            className="mt-10 inline-flex items-center gap-2 font-[510] text-mist transition hover:translate-x-1"
           >
             Veja essas competências em projetos →
           </DirectionalLink>

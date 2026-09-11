@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio · Nicolas Santos
 
-## Getting Started
+Portfólio em português com Next.js App Router, React, TypeScript e Tailwind CSS v4. Exportação estática para GitHub Pages.
 
-First, run the development server:
+## Desenvolvimento
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Validação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm run lint
+npm run build
+npm run check
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`check` verifica as cinco páginas exportadas, referências a arquivos públicos e links internos. Execute depois do build. A saída estática fica em `out/`; `next start` não serve esse formato.
 
-## Learn More
+## Estrutura
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/
+  app/          # Rotas, layout e metadados do Next.js
+  components/   # Navegação, transições, cabeçalho e rodapé compartilhados
+  data/         # Projetos, competências e formação
+  styles/       # Tokens visuais, estilos globais e transições
+public/
+  documents/    # Currículo em PDF
+  images/       # Marca e capturas reais dos projetos
+scripts/        # Verificação da exportação estática
+legacy/         # Versão original preservada como arquivo histórico
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+O alias `@/` aponta para `src/`. Componentes usados por várias rotas ficam em `components/`; conteúdo estático fica em `data/`. Arquivos de convenção do Next.js permanecem em `app/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Direção visual
 
-## Deploy on Vercel
+Referência Linear: canvas `#08090a`, superfícies `#0f1011`, bordas finas `#23252a`, texto branco/cinza e uma ação principal `#e4f222` na home. Tokens ficam em `src/styles/tokens.css`. Cards usam raio de 12px; botões, 6px. O espaçamento de layout segue 8/12/24/96px, sem alterar a escala numérica nativa do Tailwind.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A pilha tipográfica prioriza Inter e usa `system-ui` quando indisponível, conforme fallback da referência. Não exige download de fontes durante o build. Monoespaçada fica restrita a metadados técnicos. As transições respeitam `prefers-reduced-motion`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Publicação
+
+O workflow `.github/workflows/deploy.yml` publica `out/` no GitHub Pages após push em `main` ou execução manual. Push em branches de trabalho não publica o site automaticamente.

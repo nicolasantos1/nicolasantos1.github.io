@@ -1,6 +1,7 @@
+import { projects } from "@/data/projetos";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PageTransition } from "../_components/page-transition";
+import { PageTransition } from "@/components/page-transition";
 
 export const metadata: Metadata = {
   title: "Projetos | Nicolas Santos",
@@ -8,44 +9,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/projetos" },
 };
 
-const projects = [
-  {
-    nome: "cadastro-leads",
-    title: "Sistema de cadastro de usuários",
-    description:
-      "Aplicação com autenticação, persistência de dados e integração com banco relacional.",
-    tags: ["Java", "MySQL", "SQL"],
-  },
-  {
-    nome: "login-system",
-    title: "Aplicação web responsiva",
-    description:
-      "Sistema de login com interface responsiva, validação de campos e interações desenvolvidas com JavaScript.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    image: "/images/projects/login-system-responsive.png",
-    imageAlt:
-      "Interface do sistema de login adaptada para notebook, tablet e celular",
-  },
-  {
-    nome: "nicolasantos1.github.io",
-    title: "Portfólio pessoal",
-    description:
-      "Evolução do primeiro portfólio estático para uma experiência moderna, acessível e responsiva.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-];
-
 export default function ProjectsPage() {
   return (
     <PageTransition>
-      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+      <section className="mx-auto max-w-[1200px] px-5 py-20 sm:px-8 lg:py-24">
       <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
         <div>
           <p className="section-kicker">Projetos</p>
-          <h1 className="mt-4 max-w-2xl text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-4 max-w-2xl text-balance text-4xl font-[510] tracking-tight text-white sm:text-5xl">
             Aprendizado transformado em entregas.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-400">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-fog">
             Projetos desenvolvidos para praticar interfaces, lógica, integração de
             dados e organização de código.
           </p>
@@ -54,7 +28,7 @@ export default function ProjectsPage() {
           href="https://github.com/nicolasantos1"
           target="_blank"
           rel="noreferrer"
-          className="group inline-flex items-center gap-2 font-medium text-teal-200"
+          className="group inline-flex items-center gap-2 font-[510] text-mist"
         >
           Ver GitHub
           <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
@@ -67,10 +41,10 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <article
             key={project.nome}
-            className="surface group flex min-h-50 flex-col gap-6 p-6 transition hover:-translate-y-1 hover:border-teal-300/25 md:flex-row"
+            className="surface group flex min-h-50 flex-col gap-6 p-6 transition hover:-translate-y-1 hover:border-smoke md:flex-row"
           >
             {project.image && (
-              <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-slate-950 md:w-1/2">
+              <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl border border-white/10 bg-void md:w-1/2">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
@@ -81,17 +55,17 @@ export default function ProjectsPage() {
               </div>
             )}
             <div className="flex gap-2 min-w-0 flex-1 flex-col">
-              <h2 className="text-2xl font-semibold tracking-tight text-white">
+              <h2 className="text-2xl font-[510] tracking-tight text-white">
                 {project.title}
               </h2>
-              <p className="mt-4 leading-7 text-slate-400">{project.description}</p>
-              <div className="mt-auto flex justify-between items-center gap-4">
+              <p className="mt-4 leading-7 text-fog">{project.description}</p>
+              <div className="mt-6 flex flex-wrap justify-between items-center gap-4">
                 <ul
                   className="flex flex-wrap gap-2"
                   aria-label={"Tecnologias de " + project.title}
                 >
                   {project.tags.map((tag) => (
-                    <li key={tag} className="rounded-full bg-white/6 px-3 py-1.5 text-xs text-slate-300">
+                    <li key={tag} className="rounded-full bg-white/6 px-3 py-1.5 text-xs text-mist">
                       {tag}
                     </li>
                   ))}
@@ -100,7 +74,7 @@ export default function ProjectsPage() {
                   href={`https://github.com/nicolasantos1/${project.nome}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="group/link inline-flex items-center gap-2 font-medium text-teal-200"
+                  className="group/link inline-flex items-center gap-2 font-[510] text-mist"
                 >
                   Ver no GitHub
                   <span

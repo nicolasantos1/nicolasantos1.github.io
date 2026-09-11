@@ -1,0 +1,60 @@
+@theme {
+  --color-void: #08090a;
+  --color-carbon: #0f1011;
+  --color-obsidian: #161718;
+  --color-graphite: #23252a;
+  --color-smoke: #383b3f;
+  --color-ash: #62666d;
+  --color-fog: #8a8f98;
+  --color-mist: #d0d6e0;
+  --color-bone: #e5e5e6;
+  --color-paper: #ffffff;
+  --color-acid-lime: #e4f222;
+  --color-pulse-green: #27a644;
+  --color-coral-red: #eb5757;
+  --color-signal-teal: #02b8cc;
+  --color-iris-violet: #6366f1;
+  --color-lavender: #8b5cf6;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --text-caption: 13px;
+  --text-body-sm: 15px;
+  --text-body-lg: 20px;
+  --text-subheading: 24px;
+  --text-heading-sm: 32px;
+  --text-heading: 48px;
+  --text-heading-lg: 64px;
+  --text-display: 72px;
+}
+
+:root {
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+  /* ponytail: system fallback avoids build-time font downloads; self-host Inter when supplied. */
+  --font-inter-variable: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-berkeley-mono: "Berkeley Mono", ui-monospace, monospace;
+  --page-max-width: 1200px;
+  --section-gap: 96px;
+  --card-padding: 24px;
+  --element-gap: 8px;
+  --radius-cards: 12px;
+  --radius-buttons: 6px;
+  --radius-inputs: 6px;
+  --radius-badges: 4px;
+  --radius-pills: 9999px;
+  --shadow-subtle: inset 0 0 0 1px #23252a;
+}

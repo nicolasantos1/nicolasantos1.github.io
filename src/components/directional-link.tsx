@@ -27,6 +27,7 @@ export function DirectionalLink({ href, children, ...props }: DirectionalLinkPro
   return (
     <Link
       href={href}
+      aria-current={pathname === href ? "page" : undefined}
       transitionTypes={direction ? [direction] : undefined}
       {...props}
     >
