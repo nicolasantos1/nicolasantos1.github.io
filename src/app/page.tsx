@@ -29,14 +29,6 @@ export default function Home() {
       <div>
       <section className="mx-auto grid min-h-[calc(100vh-73px)] max-w-6xl items-center gap-16 px-5 py-20 sm:px-8 lg:grid-cols-[1.3fr_0.7fr] lg:py-28">
         <div>
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-teal-300/20 bg-teal-300/6 px-4 py-2 text-sm font-medium text-teal-200">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal-300 opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-teal-300" />
-            </span>
-            Disponível para estágio ou posição júnior
-          </div>
-
           <p className="mb-4 font-mono text-sm uppercase tracking-[0.24em] text-indigo-300">
             Desenvolvedor full-stack em formação
           </p>
@@ -71,7 +63,7 @@ export default function Home() {
           <div className="absolute -right-16 -top-20 size-48 rounded-full bg-indigo-500/20 blur-3xl" />
           <div className="relative flex items-center gap-4 border-b border-white/10 pb-6">
             <Image
-              src="/images/nicolas-logo.png"
+              src="/images/nicolas-logo1.png"
               alt="Logo de Nicolas Santos"
               width={88}
               height={88}

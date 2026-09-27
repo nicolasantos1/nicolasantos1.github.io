@@ -27,23 +27,23 @@ export default function ContactPage() {
 
         <div className="relative mt-12 grid gap-4 md:grid-cols-3">
           <a
-            href="mailto:nicolassantos011@gmail.com"
+            href="mailto:nicolasantos011@gmail.com"
             className="surface group p-6 transition hover:-translate-y-1 hover:border-teal-300/25"
           >
             <span className="text-sm text-slate-500">E-mail</span>
             <strong className="mt-3 block break-all text-white group-hover:text-teal-200">
-              nicolassantos011@gmail.com
+              nicolasantos011@gmail.com
             </strong>
           </a>
           <a
-            href="https://github.com/nicolassantos1"
+            href="https://github.com/nicolasantos1"
             target="_blank"
             rel="noreferrer"
             className="surface group p-6 transition hover:-translate-y-1 hover:border-teal-300/25"
           >
             <span className="text-sm text-slate-500">GitHub</span>
             <strong className="mt-3 block text-white group-hover:text-teal-200">
-              @nicolassantos1 ↗
+              @nicolasantos1 ↗
             </strong>
           </a>
           <a

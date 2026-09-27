@@ -18,7 +18,7 @@ export function SiteHeader() {
           aria-label="Página inicial"
         >
           <Image
-            src="/images/nicolas-logo.png"
+            src="/images/nicolas-logo1.png"
             alt=""
             width={40}
             height={40}

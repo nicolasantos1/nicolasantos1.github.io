@@ -39,6 +39,8 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_CADASTRO_LEADS_API_URL: ${{ vars.CADASTRO_LEADS_API_URL }}
         run: npm run build
 
       - name: Upload artifact
