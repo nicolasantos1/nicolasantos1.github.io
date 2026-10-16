@@ -35,13 +35,19 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-## API Playground
+## Projetos
 
-Em `/projetos`, os três projetos em destaque ficam na coluna esquerda. A
-seleção de Cadastro de Leads mostra, à direita, o painel que envia requisições
-diretamente do navegador à API hospedada separadamente. Os outros dois projetos
-reservam essa área para visuais futuros. O portfólio continua sendo exportado
-como site estático; ele não executa o backend nem guarda tokens.
+Em `/projetos`, os projetos da IwetI aparecem na ordem Debinatos,
+Frattellianos e IwetI. A seleção atualiza o painel visual à direita; os
+cards apresentam descrição, tecnologias e links para os repositórios de origem.
+As imagens são locais e ficam em `public/images/projects/`.
+
+## API Playground (arquivado)
+
+O código do playground de Cadastro de Leads permanece em
+`src/app/projetos/_api-playground/`, sem exibição na página atual.
+As instruções abaixo servem para uma futura reativação. O portfólio continua
+sendo exportado como site estático; ele não executa o backend nem guarda tokens.
 
 1. Configure `NEXT_PUBLIC_CADASTRO_LEADS_API_URL` em `.env.local` para
    desenvolvimento, por exemplo `http://localhost:3001`.

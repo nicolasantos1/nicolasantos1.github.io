@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { ApiPlayground } from "../_api-playground/_components/ApiPlayground";
-import { cadastroLeadsProject } from "../_api-playground/_config";
+import Image from "next/image";
 
-type FeaturedProject = {
+export type FeaturedProject = {
   nome: string;
   title: string;
   description: string;
   tags: string[];
+  repository: string;
+  image: string;
+  imageAlt: string;
 };
 
 export function FeaturedProjects({
@@ -68,7 +70,7 @@ export function FeaturedProjects({
                   ))}
                 </ul>
                 <a
-                  href={"https://github.com/nicolasantos1/" + project.nome}
+                  href={project.repository}
                   target="_blank"
                   rel="noreferrer"
                   className="group/link relative z-10 inline-flex shrink-0 items-center gap-2 font-medium text-teal-200"
@@ -89,16 +91,19 @@ export function FeaturedProjects({
 
       <section
         id="featured-project-panel"
-        aria-label={
-          selectedProject.nome === "cadastro-leads"
-            ? "Playground de Cadastro de Leads"
-            : "Visual de " + selectedProject.title
-        }
+        aria-label={"Visual de " + selectedProject.title}
         className="surface min-h-64 min-w-0 p-5 sm:p-6 lg:min-h-[36rem]"
       >
-        {selectedProject.nome === "cadastro-leads" && (
-          <ApiPlayground project={cadastroLeadsProject} />
-        )}
+        <h3 className="text-xl font-semibold text-white">{selectedProject.title}</h3>
+        <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-xl bg-slate-950/50">
+          <Image
+            src={selectedProject.image}
+            alt={selectedProject.imageAlt}
+            fill
+            sizes="(min-width: 1024px) 55vw, calc(100vw - 80px)"
+            className="object-contain"
+          />
+        </div>
       </section>
     </div>
   );
