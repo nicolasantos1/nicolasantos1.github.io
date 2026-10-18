@@ -92,6 +92,146 @@ button:focus-visible {
   animation: float 7s ease-in-out infinite;
 }
 
+.project-showcase {
+  overflow: hidden;
+}
+
+.project-devices {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgb(255 255 255 / 6%);
+  background:
+    radial-gradient(ellipse at 25% 35%, rgb(94 234 212 / 8%), transparent 65%),
+    linear-gradient(145deg, rgb(2 6 23 / 25%), rgb(2 6 23 / 60%));
+}
+
+.project-desktop {
+  width: 100%;
+  min-width: 0;
+  max-width: 48rem;
+}
+
+.project-laptop {
+  overflow: hidden;
+  margin-inline: 3%;
+  border: clamp(5px, 0.8vw, 9px) solid #263346;
+  border-bottom-width: 12px;
+  border-radius: 14px 14px 4px 4px;
+  background: #101c2d;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 30%), inset 0 0 0 1px rgb(255 255 255 / 10%);
+}
+
+.project-browser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 7px 10px;
+  color: #a7b6ca;
+  font-family: var(--font-mono);
+  font-size: 9px;
+}
+
+.project-browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.project-browser-dots i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #53657e;
+}
+
+.project-browser-dots i:first-child { background: #f0938d; }
+.project-browser-dots i:nth-child(2) { background: #e5c580; }
+.project-browser-dots i:last-child { background: #7bcbb3; }
+
+.project-browser-mark {
+  width: 23px;
+  text-align: right;
+}
+
+.project-screen {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-laptop-base {
+  position: relative;
+  height: 12px;
+  border-radius: 2px 2px 50% 50% / 2px 2px 100% 100%;
+  background: linear-gradient(#7c8ba0, #3a475b 50%, #202c3d);
+  box-shadow: 0 14px 25px rgb(0 0 0 / 25%);
+}
+
+.project-laptop-base::before {
+  position: absolute;
+  inset: 0 40% auto;
+  height: 4px;
+  border-radius: 0 0 5px 5px;
+  background: #243247;
+  content: "";
+}
+
+.project-mobile {
+  width: min(100%, 278px);
+  min-width: 0;
+}
+
+.project-phone {
+  position: relative;
+  padding: 20px 8px 16px;
+  border: 1px solid #536176;
+  border-radius: 28px;
+  background: #142033;
+  box-shadow: 0 16px 40px rgb(0 0 0 / 35%), inset 0 0 0 3px #263346;
+}
+
+.project-phone .project-screen {
+  border-radius: 12px;
+}
+
+.project-phone-camera {
+  position: absolute;
+  top: 8px;
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 4px;
+  border-radius: 4px;
+  background: #607088;
+}
+
+.project-phone-home {
+  position: absolute;
+  bottom: 6px;
+  left: 35%;
+  width: 30%;
+  height: 3px;
+  border-radius: 4px;
+  background: #607088;
+}
+
+.project-device-caption {
+  margin-top: 1rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .project-devices {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.3fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    padding: 2.5rem 2rem;
+  }
+}
+
 @keyframes float {
   0%,
   100% {

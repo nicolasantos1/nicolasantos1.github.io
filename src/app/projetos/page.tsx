@@ -19,8 +19,15 @@ const featuredProjects: FeaturedProject[] = [
       "Protótipo de loja virtual de artesanatos e itens personalizados, com catálogo, carrinho, checkout demonstrativo e painel de gestão.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     repository: "https://github.com/iweti/Debinatos",
-    image: "/images/projects/debinatos.webp",
-    imageAlt: "Marca Debinatos com mascote ruiva e joaninha",
+    liveUrl: "https://debinatos.com",
+    desktopImage: {
+      src: "/images/projects/debinatos-desktop.webp",
+      alt: "Debinatos no desktop: navegação completa, apresentação da loja e artesanatos em destaque.",
+    },
+    mobileImage: {
+      src: "/images/projects/debinatos-mobile.webp",
+      alt: "Debinatos no celular: menu compacto e apresentação da loja reorganizada em uma coluna.",
+    },
   },
   {
     nome: "frattellianos",
@@ -29,8 +36,15 @@ const featuredProjects: FeaturedProject[] = [
       "Site institucional da comunidade cristã Frattellianos, com história, missão, valores e mensagens bíblicas em uma experiência responsiva.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     repository: "https://github.com/iweti-com/Frattellianos",
-    image: "/images/projects/frattellianos.webp",
-    imageAlt: "Página inicial do Frattellianos com mensagem de fé e símbolo aos pés da cruz",
+    liveUrl: "https://frattellianos.com",
+    desktopImage: {
+      src: "/images/projects/frattellianos-desktop.webp",
+      alt: "Frattellianos no desktop: mensagem de fé ao lado do símbolo de uma pessoa aos pés da cruz.",
+    },
+    mobileImage: {
+      src: "/images/projects/frattellianos-mobile.webp",
+      alt: "Frattellianos no celular: navegação e mensagem de fé adaptadas à tela estreita.",
+    },
   },
   {
     nome: "iweti",
@@ -39,21 +53,32 @@ const featuredProjects: FeaturedProject[] = [
       "Landing page da IwetI para apresentar soluções de tecnologia, serviços e portfólio, com identidade visual própria e navegação acessível.",
     tags: ["HTML", "CSS", "JavaScript"],
     repository: "https://github.com/iweti/iweti",
-    image: "/images/projects/iweti.webp",
-    imageAlt: "Mascote da IwetI usando notebook ao lado da frase Tecnologia sem limites",
+    liveUrl: "https://iweti.com",
+    desktopImage: {
+      src: "/images/projects/iweti-desktop.webp",
+      alt: "IwetI no desktop: navegação de serviços e chamada para experiências digitais em uma composição ampla.",
+    },
+    mobileImage: {
+      src: "/images/projects/iweti-mobile.webp",
+      alt: "IwetI no celular: menu compacto, título e ações ajustados à largura da tela.",
+    },
   },
 ];
 
 export default function ProjectsPage() {
   return (
     <PageTransition>
-      <section className="mx-auto max-w-6xl px-5 py-5 sm:px-8 lg:py-10">
+      <section className="mx-auto max-w-6xl px-5 py-8 sm:px-8 lg:py-14">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="section-kicker">Projetos</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Projetos desenvolvidos na IwetI.
             </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
+              Explore o design em diferentes telas e abra cada site para conhecer
+              a experiência completa.
+            </p>
           </div>
           <a
             href="https://github.com/iweti"
@@ -71,7 +96,7 @@ export default function ProjectsPage() {
           </a>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10 sm:mt-14">
           <FeaturedProjects projects={featuredProjects} />
         </div>
       </section>

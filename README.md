@@ -37,10 +37,35 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Projetos
 
-Em `/projetos`, os projetos da IwetI aparecem na ordem Debinatos,
-Frattellianos e IwetI. A seleção atualiza o painel visual à direita; os
-cards apresentam descrição, tecnologias e links para os repositórios de origem.
-As imagens são locais e ficam em `public/images/projects/`.
+Em `/projetos`, Debinatos, Frattellianos e IwetI aparecem em seções sempre
+expandidas, nessa ordem. Cada seção apresenta descrição, tecnologias, links para
+o site e o código, além de capturas reais em molduras de notebook e celular.
+A partir de 768 px, os dispositivos ficam lado a lado; abaixo disso, empilhados.
+
+### Capturas dos projetos
+
+As seis imagens WebP ficam em `public/images/projects/`, com os sufixos
+`-desktop` e `-mobile`. Foram capturadas no Chrome em **18/10/2026**, nas
+versões publicadas, com viewports de **1440 × 900** e **390 × 844**:
+
+| Projeto | URL solicitada | Página capturada |
+| --- | --- | --- |
+| Debinatos | https://debinatos.com | https://debinatos.com/ |
+| Frattellianos | https://frattellianos.com | https://frattellianos.com/historia |
+| IwetI | https://iweti.com | https://iweti.com/ |
+
+O Debinatos estava acessível na sessão do navegador utilizada para a captura,
+mas uma requisição sem sessão redirecionou para a autenticação da Vercel.
+O link público foi preservado; a configuração de acesso pertence ao projeto de origem.
+
+Para atualizar as imagens, abra a mesma página em cada viewport, aguarde as
+fontes e imagens carregarem e capture o início da página. Quando a janela física
+limitar a captura, exporte a página completa e recorte o primeiro viewport.
+Normalize a escala da captura para as dimensões acima e exporte como WebP
+(qualidade 88), sem esticar ou recortar o layout para simular outra largura.
+Os dados e textos alternativos ficam em `src/app/projetos/page.tsx`.
+A exportação estática usa arquivos locais e não depende dos sites de origem
+para exibir as prévias. As imagens das seções seguintes têm carregamento lazy.
 
 ## API Playground (arquivado)
 

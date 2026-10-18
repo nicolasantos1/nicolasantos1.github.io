@@ -1,7 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
+
+type ProjectScreenshot = {
+  src: string;
+  alt: string;
+};
 
 export type FeaturedProject = {
   nome: string;
@@ -9,8 +11,9 @@ export type FeaturedProject = {
   description: string;
   tags: string[];
   repository: string;
-  image: string;
-  imageAlt: string;
+  liveUrl: string;
+  desktopImage: ProjectScreenshot;
+  mobileImage: ProjectScreenshot;
 };
 
 export function FeaturedProjects({
@@ -18,93 +21,106 @@ export function FeaturedProjects({
 }: {
   projects: readonly FeaturedProject[];
 }) {
-  const [selectedId, setSelectedId] = useState(projects[0].nome);
-  const selectedProject =
-    projects.find((project) => project.nome === selectedId) ?? projects[0];
-
   return (
-    <div className="grid min-w-0 items-start gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-      <div
-        role="radiogroup"
-        aria-label="Projetos em destaque"
-        className="flex min-w-0 flex-col gap-4"
-      >
-        {projects.map((project) => {
-          const selected = project.nome === selectedProject.nome;
-
-          return (
-            <article
-              key={project.nome}
-              className={
-                "surface group relative flex min-h-44 min-w-0 flex-col p-5 transition hover:ring-1 hover:ring-teal-300/20 focus-within:ring-2 focus-within:ring-teal-200/70 " +
-                (selected ? "ring-1 ring-teal-300/50" : "")
-              }
-            >
-              <input
-                type="radio"
-                name="featured-project"
-                aria-label={"Selecionar " + project.title}
-                aria-controls="featured-project-panel"
-                checked={selected}
-                onChange={() => setSelectedId(project.nome)}
-                className="absolute inset-0 m-0 h-full w-full cursor-pointer opacity-0"
-              />
-              <h2 className="text-xl font-semibold tracking-tight text-white">
+    <div className="grid min-w-0 gap-10 sm:gap-14">
+      {projects.map((project, index) => (
+        <article
+          key={project.nome}
+          aria-labelledby={`${project.nome}-title`}
+          className="surface project-showcase min-w-0"
+        >
+          <div className="flex flex-col justify-between gap-6 p-6 sm:p-8 lg:flex-row lg:items-end lg:p-10">
+            <div className="max-w-2xl">
+              <p className="section-kicker">
+                Projeto /{String(index + 1).padStart(2, "0")}
+              </p>
+              <h2
+                id={`${project.nome}-title`}
+                className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+              >
                 {project.title}
               </h2>
-              <p className="mt-3 text-sm leading-6 text-slate-400">
+              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
                 {project.description}
               </p>
-              <div className="mt-auto flex flex-wrap items-end justify-between gap-4 pt-5">
-                <ul
-                  className="flex flex-wrap gap-2"
-                  aria-label={"Tecnologias de " + project.title}
-                >
-                  {project.tags.map((tag) => (
-                    <li
-                      key={tag}
-                      className="rounded-full bg-white/6 px-3 py-1.5 text-xs text-slate-300"
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={project.repository}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group/link relative z-10 inline-flex shrink-0 items-center gap-2 font-medium text-teal-200"
-                >
-                  Ver no GitHub
-                  <span
-                    aria-hidden="true"
-                    className="transition-transform group-hover/link:translate-x-1"
+              <ul
+                className="mt-5 flex flex-wrap gap-2"
+                aria-label={`Tecnologias de ${project.title}`}
+              >
+                {project.tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="rounded-full border border-white/8 bg-white/5 px-3 py-1.5 text-xs text-slate-300"
                   >
-                    ↗
-                  </span>
-                </a>
-              </div>
-            </article>
-          );
-        })}
-      </div>
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-      <section
-        id="featured-project-panel"
-        aria-label={"Visual de " + selectedProject.title}
-        className="surface min-h-64 min-w-0 p-5 sm:p-6 lg:min-h-[36rem]"
-      >
-        <h3 className="text-xl font-semibold text-white">{selectedProject.title}</h3>
-        <div className="relative mt-6 aspect-[4/3] overflow-hidden rounded-xl bg-slate-950/50">
-          <Image
-            src={selectedProject.image}
-            alt={selectedProject.imageAlt}
-            fill
-            sizes="(min-width: 1024px) 55vw, calc(100vw - 80px)"
-            className="object-contain"
-          />
-        </div>
-      </section>
+            <div className="flex flex-wrap gap-3 lg:shrink-0">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Abrir site ${project.title} (nova aba)`}
+                className="inline-flex items-center justify-center gap-3 rounded-full bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-teal-200"
+              >
+                Abrir site <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href={project.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ver código de ${project.title} no GitHub (nova aba)`}
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-slate-200 transition hover:-translate-y-0.5 hover:border-teal-300/40 hover:text-teal-200"
+              >
+                Ver código <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="project-devices">
+            <figure className="project-desktop">
+              <div className="project-laptop">
+                <div className="project-browser" aria-hidden="true">
+                  <span className="project-browser-dots"><i /><i /><i /></span>
+                  <span>{new URL(project.liveUrl).hostname}</span>
+                  <span className="project-browser-mark">↗</span>
+                </div>
+                <Image
+                  src={project.desktopImage.src}
+                  alt={project.desktopImage.alt}
+                  width={1440}
+                  height={900}
+                  sizes="(min-width: 1152px) 760px, (min-width: 768px) 65vw, calc(100vw - 88px)"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  className="project-screen"
+                />
+              </div>
+              <div className="project-laptop-base" aria-hidden="true" />
+              <figcaption className="project-device-caption">Versão desktop</figcaption>
+            </figure>
+
+            <figure className="project-mobile">
+              <div className="project-phone">
+                <div className="project-phone-camera" aria-hidden="true" />
+                <Image
+                  src={project.mobileImage.src}
+                  alt={project.mobileImage.alt}
+                  width={390}
+                  height={844}
+                  sizes="(min-width: 1152px) 220px, (min-width: 768px) 20vw, 260px"
+                  loading="lazy"
+                  className="project-screen"
+                />
+                <div className="project-phone-home" aria-hidden="true" />
+              </div>
+              <figcaption className="project-device-caption">Versão mobile</figcaption>
+            </figure>
+          </div>
+        </article>
+      ))}
     </div>
   );
 }
