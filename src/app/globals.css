@@ -88,10 +88,6 @@ button:focus-visible {
   color: transparent;
 }
 
-.float-slow {
-  animation: float 7s ease-in-out infinite;
-}
-
 .project-showcase {
   overflow: hidden;
 }
@@ -229,16 +225,6 @@ button:focus-visible {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.3fr);
     gap: clamp(1.5rem, 3vw, 3rem);
     padding: 2.5rem 2rem;
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
   }
 }
 
