@@ -34,3 +34,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Projetos
+
+Em `/projetos`, Debinatos, Frattellianos e IwetI aparecem em seções sempre
+expandidas, nessa ordem. Cada seção apresenta descrição, tecnologias, links para
+o site e o código, além de capturas reais em molduras de notebook e celular.
+A partir de 768 px, os dispositivos ficam lado a lado; abaixo disso, empilhados.
+
+### Capturas dos projetos
+
+As seis imagens WebP ficam em `public/images/projects/`, com os sufixos
+`-desktop` e `-mobile`. Foram capturadas no Chrome em **18/10/2026**, nas
+versões publicadas, com viewports de **1440 × 900** e **390 × 844**:
+
+| Projeto | URL solicitada | Página capturada |
+| --- | --- | --- |
+| Debinatos | https://debinatos.com | https://debinatos.com/ |
+| Frattellianos | https://frattellianos.com | https://frattellianos.com/historia |
+| IwetI | https://iweti.com | https://iweti.com/ |
+
+O Debinatos estava acessível na sessão do navegador utilizada para a captura,
+mas uma requisição sem sessão redirecionou para a autenticação da Vercel.
+O link público foi preservado; a configuração de acesso pertence ao projeto de origem.
+
+Para atualizar as imagens, abra a mesma página em cada viewport, aguarde as
+fontes e imagens carregarem e capture o início da página. Quando a janela física
+limitar a captura, exporte a página completa e recorte o primeiro viewport.
+Normalize a escala da captura para as dimensões acima e exporte como WebP
+(qualidade 88), sem esticar ou recortar o layout para simular outra largura.
+Os dados e textos alternativos ficam em `src/app/projetos/page.tsx`.
+A exportação estática usa arquivos locais e não depende dos sites de origem
+para exibir as prévias. As imagens das seções seguintes têm carregamento lazy.
+
+## API Playground (arquivado)
+
+O código do playground de Cadastro de Leads permanece em
+`src/app/projetos/_api-playground/`, sem exibição na página atual.
+O portfólio continua sendo exportado como site estático; ele não executa o
+backend nem guarda tokens. A configuração arquivada mantém a URL base vazia,
+deixando a execução de requisições desabilitada.
+
+Os endpoints permitidos ficam em `src/app/projetos/_api-playground/_config.ts`.
+Para adicionar um endpoint, inclua seu método, caminho, descrição, campos e
+exemplo nesse arquivo. Outras APIs podem usar a mesma estrutura de configuração
+no painel de outros projetos. O serviço `_service.ts` faz o `fetch`; o componente
+`ApiPlayground.tsx` gerencia o endpoint e os estados de loading e resposta.

@@ -2,7 +2,12 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/8">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p>© 2026 Nicolas Santos. Construído com Next.js.</p>
+        <p>
+          Nicolas Santos © {new Date().getFullYear()} · Desenvolvido por{" "}
+          <a href="https://iweti.com" className="rounded-sm transition hover:text-teal-200">
+            IWETI
+          </a>
+        </p>
         <div className="flex gap-5">
           <a
             href="https://github.com/nicolasantos1"
