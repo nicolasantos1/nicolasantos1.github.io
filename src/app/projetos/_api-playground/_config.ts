@@ -1,12 +1,9 @@
 import type { ApiProjectConfig } from "./_types";
 
-const cadastroLeadsApiUrl =
-  process.env.NEXT_PUBLIC_CADASTRO_LEADS_API_URL?.trim().replace(/\/+$/, "") ?? "";
-
 export const cadastroLeadsProject: ApiProjectConfig = {
   id: "cadastro-leads",
   name: "CadastroLeads",
-  baseUrl: cadastroLeadsApiUrl,
+  baseUrl: "",
   endpoints: [
     {
       id: "create-lead",

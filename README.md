@@ -71,22 +71,12 @@ para exibir as prévias. As imagens das seções seguintes têm carregamento laz
 
 O código do playground de Cadastro de Leads permanece em
 `src/app/projetos/_api-playground/`, sem exibição na página atual.
-As instruções abaixo servem para uma futura reativação. O portfólio continua
-sendo exportado como site estático; ele não executa o backend nem guarda tokens.
-
-1. Configure `NEXT_PUBLIC_CADASTRO_LEADS_API_URL` em `.env.local` para
-   desenvolvimento, por exemplo `http://localhost:3001`.
-2. Para publicar a integração, configure a variável de repositório
-   `CADASTRO_LEADS_API_URL` no GitHub Actions com a URL HTTPS da API e gere
-   um novo build. Sem essa variável, o playground ainda aparece quando
-   Cadastro de Leads é selecionado, mas a execução fica desabilitada.
-3. Permita a origem do portfólio em `CORS_ALLOWED_ORIGINS` no backend. O
-   backend controla autenticação, validação, limites de requisições e os dados.
+O portfólio continua sendo exportado como site estático; ele não executa o
+backend nem guarda tokens. A configuração arquivada mantém a URL base vazia,
+deixando a execução de requisições desabilitada.
 
 Os endpoints permitidos ficam em `src/app/projetos/_api-playground/_config.ts`.
 Para adicionar um endpoint, inclua seu método, caminho, descrição, campos e
 exemplo nesse arquivo. Outras APIs podem usar a mesma estrutura de configuração
 no painel de outros projetos. O serviço `_service.ts` faz o `fetch`; o componente
 `ApiPlayground.tsx` gerencia o endpoint e os estados de loading e resposta.
-Não coloque credenciais em variáveis `NEXT_PUBLIC_`: seus valores são enviados
-ao navegador.
