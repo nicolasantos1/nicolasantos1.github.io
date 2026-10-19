@@ -16,12 +16,11 @@ export default function ContactPage() {
         <div className="relative max-w-3xl">
           <p className="section-kicker">Contato</p>
           <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Vamos transformar estudo em impacto real.
+            Vamos conversar?
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Procuro oportunidade como desenvolvedor júnior ou estagiário. Se sua
-            equipe busca alguém curioso, responsável e persistente, quero conhecer
-            o desafio.
+            Quer conversar sobre um projeto, trocar ideias ou apresentar uma
+            oportunidade? Entre em contato para conhecermos as possibilidades.
           </p>
         </div>
 

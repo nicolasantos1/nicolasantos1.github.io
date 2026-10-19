@@ -46,19 +46,19 @@ export default function Home() {
     <PageTransition>
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <section aria-labelledby="home-title" className="pb-12 pt-16 sm:pb-14 sm:pt-20 lg:pt-24">
-          <p className="section-kicker">Olá, sou Nicolas Santos</p>
+          <p className="section-kicker">Desenvolvedor full-stack</p>
           <h1
             id="home-title"
             className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl"
           >
-            Ideias que ganham <span className="text-gradient">forma na web.</span>
+            Nicolas <span className="text-gradient">Santos</span>
           </h1>
 
           <div className="mt-7 flex flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
             <p className="max-w-xl text-pretty text-base leading-8 text-slate-300 sm:text-lg">
-              Desenvolvedor full-stack em formação e estudante de ADS no
-              Mackenzie. Construo aplicações web com atenção à experiência,
-              organização e ao que acontece por trás da interface.
+              Desenvolvo aplicações web, do frontend ao backend, com atenção à
+              experiência, à organização do código e à integração entre sistemas.
+              Sou estudante de Análise e Desenvolvimento de Sistemas no Mackenzie.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
               <DirectionalLink
