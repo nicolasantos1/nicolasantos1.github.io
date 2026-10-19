@@ -8,7 +8,6 @@ import { DirectionalLink } from "./directional-link";
 const navigation = [
   { href: "/sobre", label: "Sobre" },
   { href: "/projetos", label: "Projetos" },
-  { href: "/formacao", label: "Formação" },
   { href: "/contato", label: "Contato" },
 ] as const;
 

@@ -26,21 +26,6 @@ const selectedProjects = [
   },
 ] as const;
 
-const destinations = [
-  {
-    href: "/sobre",
-    title: "Além do código",
-    description: "Minha trajetória, interesses e jeito de construir.",
-    action: "Sobre mim",
-  },
-  {
-    href: "/formacao",
-    title: "Aprendizado em movimento",
-    description: "A base acadêmica e técnica por trás da prática.",
-    action: "Minha formação",
-  },
-] as const;
-
 export default function Home() {
   return (
     <PageTransition>
@@ -143,22 +128,21 @@ export default function Home() {
 
         <section aria-labelledby="trajectory-title" className="border-t border-white/10 py-10 sm:py-12">
           <h2 id="trajectory-title" className="section-kicker">Conheça minha trajetória</h2>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 sm:gap-12">
-            {destinations.map((item) => (
-              <DirectionalLink
-                key={item.href}
-                href={item.href}
-                className="group rounded-sm py-2"
-              >
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-slate-400">{item.description}</p>
-                <span className="mt-4 inline-flex items-center gap-2 text-sm text-teal-200">
-                  {item.action}
-                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
-                </span>
-              </DirectionalLink>
-            ))}
-          </div>
+          <DirectionalLink
+            href="/sobre"
+            className="group mt-6 flex flex-col justify-between gap-5 rounded-sm py-2 sm:flex-row sm:items-center"
+          >
+            <div>
+              <h3 className="text-xl font-semibold text-white">Além do código</h3>
+              <p className="mt-2 text-sm leading-7 text-slate-400">
+                Minha trajetória, competências e formação em um só lugar.
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-2 text-sm text-teal-200">
+              Sobre mim
+              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </DirectionalLink>
         </section>
       </div>
     </PageTransition>

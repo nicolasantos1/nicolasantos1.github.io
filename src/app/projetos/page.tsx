@@ -7,7 +7,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Projetos | Nicolas Santos",
-  description: "Projetos desenvolvidos na IwetI: Debinatos, Frattellianos e IwetI.",
+  description: "Projetos de Nicolas Santos: Debinatos, Frattellianos e IwetI.",
   alternates: { canonical: "/projetos" },
 };
 
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
           <div>
             <p className="section-kicker">Projetos</p>
             <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Projetos desenvolvidos na IwetI.
+              Projetos que desenvolvi.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:text-lg">
               Explore o design em diferentes telas e abra cada site para conhecer
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
             </p>
           </div>
           <a
-            href="https://github.com/iweti"
+            href="https://github.com/nicolasantos1"
             target="_blank"
             rel="noreferrer"
             className="group inline-flex items-center gap-2 font-medium text-teal-200"

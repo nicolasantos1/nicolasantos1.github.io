@@ -4,7 +4,7 @@ import Link, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
-const routes = ["/", "/sobre", "/projetos", "/formacao", "/contato"] as const;
+const routes = ["/", "/sobre", "/projetos", "/contato"] as const;
 
 type Route = (typeof routes)[number];
 type DirectionalLinkProps = LinkProps &
