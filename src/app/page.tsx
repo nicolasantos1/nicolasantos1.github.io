@@ -1,126 +1,121 @@
 import Image from "next/image";
 import { DirectionalLink } from "./_components/directional-link";
 import { PageTransition } from "./_components/page-transition";
-
-const selectedProjects = [
-  {
-    title: "Debinatos",
-    category: "E-commerce · Protótipo",
-    description: "Uma loja de artesanatos, do catálogo ao checkout demonstrativo.",
-    image: "/images/projects/debinatos-desktop.webp",
-    href: "https://debinatos.com",
-  },
-  {
-    title: "Frattellianos",
-    category: "Site institucional",
-    description: "História, valores e mensagens de uma comunidade cristã.",
-    image: "/images/projects/frattellianos-desktop.webp",
-    href: "https://frattellianos.com",
-  },
-  {
-    title: "IwetI",
-    category: "Tecnologia · Landing page",
-    description: "Uma presença digital para apresentar serviços e soluções web.",
-    image: "/images/projects/iweti-desktop.webp",
-    href: "https://iweti.com",
-  },
-] as const;
+import { featuredProjects } from "./projetos/_data";
 
 export default function Home() {
+  const [featured, ...otherProjects] = featuredProjects;
+
   return (
     <PageTransition>
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <section aria-labelledby="home-title" className="pb-12 pt-16 sm:pb-14 sm:pt-20 lg:pt-24">
-          <p className="section-kicker">Desenvolvedor full-stack</p>
-          <h1
-            id="home-title"
-            className="mt-6 max-w-4xl text-balance text-5xl font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl"
-          >
-            Nicolas <span className="text-gradient">Santos</span>
-          </h1>
-
-          <div className="mt-7 flex flex-col justify-between gap-8 lg:flex-row lg:items-end lg:gap-12">
-            <p className="max-w-xl text-pretty text-base leading-8 text-slate-300 sm:text-lg">
-              Desenvolvo aplicações web, do frontend ao backend, com atenção à
-              experiência, à organização do código e à integração entre sistemas.
-              Sou estudante de Análise e Desenvolvimento de Sistemas no Mackenzie.
+        <section
+          aria-labelledby="home-title"
+          className="grid items-center gap-8 py-8 sm:gap-12 sm:py-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 lg:py-20"
+        >
+          <div>
+            <h1
+              id="home-title"
+              className="text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-6xl"
+            >
+              Nicolas Santos
+            </h1>
+            <p className="mt-4 text-lg font-medium leading-7 text-slate-200 sm:text-2xl sm:leading-8">
+              Desenvolvimento web e backend.
             </p>
-            <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0">
+            <p className="mt-4 max-w-lg text-pretty text-base leading-7 text-slate-300">
+              Aplicações web com foco em usabilidade e integração.
+              Estudante de ADS no Mackenzie, em São Paulo.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
               <DirectionalLink
                 href="/projetos"
-                className="inline-flex items-center justify-center gap-3 rounded-full bg-teal-300 px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-teal-200"
+                className="inline-flex min-h-12 items-center justify-center rounded-full bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-teal-200"
               >
-                Explorar projetos <span aria-hidden="true">↗</span>
+                Ver projetos
               </DirectionalLink>
               <DirectionalLink
                 href="/contato"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/5"
+                className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5"
               >
-                Fale comigo
+                Contato
               </DirectionalLink>
             </div>
           </div>
 
-          <dl className="mt-10 grid gap-6 border-t border-white/10 pt-6 sm:grid-cols-3 sm:gap-8">
-            <div>
-              <dt className="text-xs uppercase tracking-[0.16em] text-slate-500">Foco</dt>
-              <dd className="mt-2 text-sm text-slate-300">Desenvolvimento web & backend</dd>
+          <a
+            href={featured.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Abrir site ${featured.title} (nova aba)`}
+            className="group min-w-0 rounded-2xl border border-white/10 bg-[#101c2d] transition-colors hover:border-white/30"
+          >
+            <div className="flex items-center justify-between gap-4 px-5 py-4 text-sm">
+              <span className="text-slate-300">Projeto em destaque</span>
+              <span className="text-slate-400">{featured.category}</span>
             </div>
-            <div>
-              <dt className="text-xs uppercase tracking-[0.16em] text-slate-500">Tecnologias</dt>
-              <dd className="mt-2 text-sm text-slate-300">JavaScript · TypeScript · Java</dd>
+            <Image
+              src={featured.desktopImage.src}
+              alt={featured.desktopImage.alt}
+              width={1440}
+              height={900}
+              sizes="(min-width: 1152px) 570px, (min-width: 1024px) 50vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)"
+              loading="eager"
+              className="aspect-[8/5] w-full border-y border-white/10 object-cover object-top"
+            />
+            <div className="p-5 sm:p-6">
+              <div className="flex items-center justify-between gap-4">
+                <h2 className="text-2xl font-semibold text-white">{featured.title}</h2>
+                <span className="text-sm font-medium text-teal-200">
+                  Abrir site <span aria-hidden="true">↗</span>
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-6 text-slate-300">{featured.summary}</p>
             </div>
-            <div>
-              <dt className="text-xs uppercase tracking-[0.16em] text-slate-500">Localização</dt>
-              <dd className="mt-2 text-sm text-slate-300">São Paulo, Brasil</dd>
-            </div>
-          </dl>
+          </a>
         </section>
 
         <section aria-labelledby="selected-projects-title" className="border-t border-white/10 py-10 sm:py-12">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <div>
-              <p className="section-kicker">Da ideia à prática</p>
-              <h2 id="selected-projects-title" className="mt-3 text-3xl font-semibold tracking-tight text-white">
-                Projetos selecionados
-              </h2>
-            </div>
+            <h2 id="selected-projects-title" className="text-3xl font-semibold tracking-tight text-white">
+              Mais projetos
+            </h2>
             <DirectionalLink
               href="/projetos"
-              className="inline-flex w-fit items-center gap-2 rounded-sm text-sm font-medium text-teal-200 transition hover:text-teal-100"
+              className="inline-flex min-h-11 w-fit items-center rounded-sm text-sm font-medium text-teal-200 transition-colors hover:text-teal-100"
             >
-              Ver projetos e código <span aria-hidden="true">→</span>
+              Ver projetos e código
             </DirectionalLink>
           </div>
 
-          <div className="mt-7 grid gap-8 md:grid-cols-3 md:gap-6">
-            {selectedProjects.map((project) => (
+          <div className="mt-7 grid gap-8 md:grid-cols-2 md:gap-8">
+            {otherProjects.map((project) => (
               <a
-                key={project.title}
-                href={project.href}
+                key={project.nome}
+                href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visitar ${project.title} (nova aba)`}
                 className="group min-w-0 rounded-xl"
               >
-                <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-900">
+                <div className="overflow-hidden rounded-xl border border-white/10 bg-slate-900 transition-colors group-hover:border-white/30">
                   <Image
-                    src={project.image}
-                    alt={`Página inicial do site ${project.title}`}
+                    src={project.desktopImage.src}
+                    alt={project.desktopImage.alt}
                     width={1440}
                     height={900}
-                    sizes="(min-width: 1152px) 336px, (min-width: 768px) 30vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)"
-                    className="aspect-[8/5] w-full object-cover object-top transition duration-300 group-hover:scale-[1.025]"
+                    sizes="(min-width: 1152px) 528px, (min-width: 768px) 45vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)"
+                    className="aspect-[8/5] w-full object-cover object-top"
                   />
                 </div>
                 <p className="mt-5 text-xs text-slate-400">{project.category}</p>
                 <div className="mt-2 flex items-center justify-between gap-4">
-                  <h3 className="text-xl font-semibold text-white transition group-hover:text-teal-200">
+                  <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-teal-200">
                     {project.title}
                   </h3>
-                  <span aria-hidden="true" className="text-teal-200 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
+                  <span aria-hidden="true" className="text-teal-200">↗</span>
                 </div>
-                <p className="mt-2 text-sm leading-6 text-slate-400">{project.description}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">{project.summary}</p>
               </a>
             ))}
           </div>
@@ -139,8 +134,7 @@ export default function Home() {
               </p>
             </div>
             <span className="inline-flex shrink-0 items-center gap-2 text-sm text-teal-200">
-              Sobre mim
-              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">→</span>
+              Sobre mim <span aria-hidden="true">→</span>
             </span>
           </DirectionalLink>
         </section>
