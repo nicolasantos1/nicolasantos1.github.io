@@ -63,9 +63,32 @@ fontes e imagens carregarem e capture o início da página. Quando a janela fís
 limitar a captura, exporte a página completa e recorte o primeiro viewport.
 Normalize a escala da captura para as dimensões acima e exporte como WebP
 (qualidade 88), sem esticar ou recortar o layout para simular outra largura.
-Os dados e textos alternativos ficam em `src/app/projetos/page.tsx`.
+Os dados, resumos e textos alternativos ficam em `src/app/projetos/_data.ts`,
+compartilhados pela página inicial e pela página de projetos. A home destaca
+Debinatos ao lado da apresentação e mostra os demais projetos logo abaixo.
 A exportação estática usa arquivos locais e não depende dos sites de origem
 para exibir as prévias. As imagens das seções seguintes têm carregamento lazy.
+
+### Validação do portfólio
+
+```sh
+npm run lint
+npm run build
+python3 scripts/check_export.py
+```
+
+O último comando verifica links locais, âncoras e imagens no HTML exportado,
+incluindo o PDF do currículo. Requer Python 3, sem pacotes adicionais.
+
+No navegador, confira também:
+
+- Em 320 e 390 px, currículo visível com menu fechado e conteúdo sem corte horizontal.
+- Menu abre com teclado, fecha com Escape devolvendo foco ao botão e fecha ao navegar.
+- Página atual indicada no menu; voltar/avançar atualiza a indicação.
+- Screenshots junto ao respectivo projeto no celular e lado a lado no desktop.
+- “Copiar e-mail” confirma “E-mail copiado”; com permissão de área de transferência
+  bloqueada, orienta a selecionar o endereço. O link de e-mail continua disponível.
+- Com movimento reduzido, transições de página desativadas.
 
 ## API Playground (arquivado)
 

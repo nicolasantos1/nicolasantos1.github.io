@@ -36,7 +36,7 @@ export function CopyEmailButton({ email }: { email: string }) {
           <rect x="8" y="8" width="12" height="12" rx="2" />
           <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
         </svg>
-        Copiar endereço
+        Copiar e-mail
       </button>
       <p
         role="status"
@@ -45,7 +45,7 @@ export function CopyEmailButton({ email }: { email: string }) {
         className={`min-h-6 text-sm leading-6 sm:basis-full ${feedback === "error" ? "text-rose-200" : "text-teal-200"}`}
       >
         {feedback === "copied"
-          ? "Endereço copiado"
+          ? "E-mail copiado"
           : feedback === "error"
             ? "Não foi possível copiar. Selecione o endereço acima."
             : ""}
