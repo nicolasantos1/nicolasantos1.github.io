@@ -27,7 +27,10 @@ export default function ContactPage() {
           </div>
 
           <div className="min-w-0">
-            <div className="rounded-3xl border border-white/10 bg-[#101c2d] p-6 sm:p-8">
+            <div className="relative isolate rounded-[2rem] border border-teal-300/25 bg-gradient-to-br from-teal-300/10 via-indigo-400/8 to-transparent p-6 sm:p-8">
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden rounded-[inherit]">
+                <div className="absolute -right-16 -top-16 size-56 rounded-full bg-teal-300/10 blur-3xl" />
+              </div>
               <div aria-hidden="true" className="mb-8 flex size-12 items-center justify-center rounded-2xl border border-teal-300/20 bg-teal-300/10 text-teal-200">
                 <svg viewBox="0 0 24 24" fill="none" className="size-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="5" width="18" height="14" rx="3" />
@@ -64,7 +67,7 @@ export default function ContactPage() {
                 <span aria-hidden="true" className="text-teal-200 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">↗</span>
               </a>
               <a
-                href="/documents/NicolasSantosDoNascimento.pdf"
+                href="/documents/curriculo-nicolas-santos.pdf"
                 download
                 className="group flex items-center justify-between gap-5 rounded-sm py-6 transition hover:text-teal-200"
               >

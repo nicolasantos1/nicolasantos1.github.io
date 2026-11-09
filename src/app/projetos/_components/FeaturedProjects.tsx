@@ -8,9 +8,6 @@ type ProjectScreenshot = {
 export type FeaturedProject = {
   nome: string;
   title: string;
-  category: string;
-  summary: string;
-  technicalFocus: string;
   description: string;
   tags: string[];
   repository: string;
@@ -34,19 +31,17 @@ export function FeaturedProjects({
         >
           <div className="flex flex-col justify-between gap-6 p-6 sm:p-8 lg:flex-row lg:items-end lg:p-10">
             <div className="max-w-2xl">
-              <p className="text-sm text-slate-400">{project.category}</p>
+              <p className="section-kicker">
+                Projeto /{String(index + 1).padStart(2, "0")}
+              </p>
               <h2
                 id={`${project.nome}-title`}
-                className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-4xl"
+                className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
               >
                 {project.title}
               </h2>
               <p className="mt-4 max-w-xl text-sm leading-7 text-slate-400 sm:text-base">
                 {project.description}
-              </p>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300">
-                <strong className="font-medium text-white">Foco técnico: </strong>
-                {project.technicalFocus}
               </p>
               <ul
                 className="mt-5 flex flex-wrap gap-2"

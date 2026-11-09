@@ -37,7 +37,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
 
   return (
     <div
-      className="mx-auto grid max-w-6xl grid-cols-[minmax(2rem,1fr)_auto_auto] items-center gap-x-2 px-4 py-4 sm:px-8 md:flex md:gap-4"
+      className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 px-5 py-4 sm:px-8 md:flex md:justify-between md:gap-4"
       onKeyDown={(event) => {
         if (event.key === "Escape" && menuOpen) {
           event.preventDefault();
@@ -48,7 +48,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
     >
       <DirectionalLink
         href="/"
-        className="flex w-fit shrink-0 items-center gap-3 rounded-full text-sm font-semibold tracking-wide text-white md:mr-auto"
+        className="group flex shrink-0 items-center gap-3 rounded-full text-sm font-semibold tracking-wide text-white"
         aria-label="Página inicial"
         aria-current={pathname === "/" ? "page" : undefined}
         onClick={() => setMenuOpen(false)}
@@ -59,9 +59,9 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
           width={40}
           height={40}
           priority
-          className="size-8 shrink-0 rounded-full ring-1 ring-white/15 sm:size-10"
+          className="size-10 rounded-full ring-1 ring-white/15 transition-transform group-hover:rotate-6"
         />
-        <span className="hidden min-[480px]:inline">Nicolas Santos</span>
+        <span>Nicolas Santos</span>
       </DirectionalLink>
 
       <button
@@ -70,7 +70,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
         aria-expanded={menuOpen}
         aria-controls="site-navigation"
         onClick={() => setMenuOpen((open) => !open)}
-        className="inline-flex min-h-11 items-center justify-center gap-1 rounded-full border border-white/15 px-3 text-xs font-medium text-white transition hover:border-teal-300/40 hover:bg-white/5 sm:text-sm md:hidden"
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-white/15 px-4 text-sm font-medium text-white transition hover:border-teal-300/40 hover:bg-white/5 md:hidden"
       >
         Menu
         <svg
@@ -91,14 +91,14 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
 
       <nav
         id="site-navigation"
-        className={`${menuOpen ? "block" : "hidden"} col-span-3 row-start-2 mt-4 min-w-0 border-t border-white/10 pt-3 md:mt-0 md:block md:border-0 md:pt-0`}
+        className={`${menuOpen ? "block" : "hidden"} col-span-2 mt-4 min-w-0 border-t border-white/10 pt-3 md:mt-0 md:block md:border-0 md:pt-0`}
         aria-label="Navegação principal"
       >
         <ul className="flex flex-col gap-1 text-sm text-slate-300 md:flex-row md:items-center md:gap-2">
           {navigation.map((item) => (
             <li key={item.href}>
               <DirectionalLink
-                className="nav-link min-h-11 items-center"
+                className={`nav-link min-h-11 items-center ${pathname === item.href ? "bg-teal-300/10 text-teal-200" : ""}`}
                 href={item.href}
                 aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
@@ -107,18 +107,19 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
               </DirectionalLink>
             </li>
           ))}
+          <li>
+            <a
+              href="/documents/NicolasSantosDoNascimento.pdf"
+              className="mt-2 inline-flex min-h-11 items-center rounded-full border border-teal-300/40 px-4 py-2 font-medium text-teal-200 transition hover:border-teal-200 hover:bg-teal-300/10 md:ml-1 md:mt-0"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
+            >
+              Currículo
+            </a>
+          </li>
         </ul>
       </nav>
-      <a
-        href="/documents/NicolasSantosDoNascimento.pdf"
-        className="col-start-3 row-start-1 inline-flex min-h-11 items-center rounded-full border border-white/20 px-3 py-2 text-xs font-medium text-white transition hover:border-teal-200 hover:bg-white/5 sm:px-4 sm:text-sm"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Abrir currículo em PDF (nova aba)"
-        onClick={() => setMenuOpen(false)}
-      >
-        Currículo
-      </a>
     </div>
   );
 }

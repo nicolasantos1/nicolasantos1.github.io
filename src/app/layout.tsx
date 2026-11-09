@@ -42,8 +42,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </a>
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_0%,rgba(94,234,212,0.06),transparent_50%)]"
+          className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(45,212,191,0.13),transparent_28%),radial-gradient(circle_at_85%_28%,rgba(99,102,241,0.16),transparent_30%),linear-gradient(180deg,#07111f_0%,#0a1423_48%,#07111f_100%)]"
         />
+        <div aria-hidden="true" className="grid-mask pointer-events-none fixed inset-0 -z-10" />
         <SiteHeader />
         <main id="conteudo" className="min-h-[calc(100vh-146px)]">
           {children}
