@@ -1,0 +1,26 @@
+---
+import { site } from "../data/site";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title={`Formação | ${site.name}`}
+  description={`A formação acadêmica e os cursos de ${site.name} estão na página Sobre.`}
+  canonical="/sobre"
+  noindex
+>
+  <meta slot="head" http-equiv="refresh" content="0;url=/sobre#formacao" />
+
+  <section class="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:py-16">
+    <h1 class="text-3xl font-semibold text-white">Formação e cursos</h1>
+    <p class="mt-4 leading-7 text-slate-300">
+      Minha formação agora faz parte da página Sobre.
+    </p>
+    <a
+      href="/sobre#formacao"
+      class="mt-6 inline-flex rounded-sm font-semibold text-teal-200 transition hover:text-teal-100"
+    >
+      Conheça minha formação →
+    </a>
+  </section>
+</Layout>

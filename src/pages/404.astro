@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { site } from "../data/site";
+---
+
+<Layout title={`Página não encontrada | ${site.name}`} noindex>
+  <section class="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+    <p class="section-kicker">Erro 404</p>
+    <h1 class="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+      Página não encontrada.
+    </h1>
+    <p class="mt-5 max-w-xl text-base leading-7 text-slate-300">
+      O endereço pode ter mudado ou a página não existe. Continue pela página
+      inicial ou conheça meus projetos.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a
+        href="/"
+        class="inline-flex min-h-12 items-center rounded-full bg-teal-300 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-teal-200"
+      >
+        Voltar ao início
+      </a>
+      <a
+        href="/projetos"
+        class="inline-flex min-h-12 items-center rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white hover:bg-white/5"
+      >
+        Ver projetos
+      </a>
+    </div>
+  </section>
+</Layout>

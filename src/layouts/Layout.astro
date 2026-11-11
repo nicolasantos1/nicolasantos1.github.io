@@ -1,0 +1,91 @@
+---
+import { getImage } from "astro:assets";
+import logo from "../../public/images/nicolas-logo1.png";
+import { site } from "../data/site";
+import { ClientRouter, fade } from "astro:transitions";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+const {
+  title = `${site.name} | Desenvolvedor Full-Stack`,
+  description = `Portfólio de ${site.name}, estudante de Análise e Desenvolvimento de Sistemas com foco em desenvolvimento web e backend.`,
+  canonical = Astro.url.pathname.replace(/\/$/, "") || "/",
+  noindex = false,
+} = Astro.props;
+const canonicalURL = new URL(canonical, Astro.site);
+const socialImage = await getImage({
+  src: logo,
+  width: 512,
+  height: 512,
+  format: "png",
+});
+const socialImageURL = new URL(socialImage.src, Astro.site);
+const socialImageAlt = `Logo de ${site.name}`;
+---
+
+<!doctype html>
+<html lang="pt-BR" transition:animate="none">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content={`${site.name}, desenvolvedor web, desenvolvedor full-stack, Next.js, JavaScript, Java`}
+    />
+    <meta name="author" content={site.name} />
+    <meta name="creator" content={site.name} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={`Portfólio de ${site.name}`} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <ClientRouter fallback="swap" />
+    <slot name="head" />
+  </head>
+  <body>
+    <a
+      href="#conteudo"
+      class="fixed left-4 top-4 z-[60] -translate-y-20 rounded-full bg-white px-4 py-2 font-semibold text-slate-950 transition focus:translate-y-0"
+    >
+      Ir para o conteúdo
+    </a>
+    <div
+      aria-hidden="true"
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_0%,rgba(94,234,212,0.06),transparent_50%)]"
+    ></div>
+    <SiteHeader />
+    <main
+      id="conteudo"
+      class="min-h-[calc(100vh-146px)]"
+      transition:name="page"
+      transition:animate={fade({ duration: "160ms" })}
+    >
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

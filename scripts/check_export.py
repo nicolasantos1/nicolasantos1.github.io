@@ -1,4 +1,4 @@
-"""Check local links, anchors and images after `npm run build`.
+"""Check local links, anchors and images after `bun run build`.
 
 Run: python3 scripts/check_export.py
 """
@@ -24,9 +24,9 @@ class Page(HTMLParser):
             self.references.append(attrs[key])
 
 
-root = Path(__file__).resolve().parents[1] / "out"
+root = Path(__file__).resolve().parents[1] / "dist"
 pages = {path: Page(path) for path in root.rglob("*.html")}
-assert pages, "No exported pages. Run npm run build first."
+assert pages, "No exported pages. Run bun run build first."
 errors = []
 checked = 0
 

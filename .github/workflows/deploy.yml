@@ -1,9 +1,8 @@
 # Source: ci-cd-generator
 # Triggers: push to main, manual workflow_dispatch
 # Required secrets: none
-# Security: minimal, deployment-only workflow
-# CI heuristics omitted because this workflow only builds and deploys GitHub Pages.
-name: Deploy Next.js site to Pages
+# Validates source and static output before deploying to GitHub Pages.
+name: Deploy Astro site to Pages
 
 on:
   push:
@@ -26,25 +25,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
+          bun-version: 1.4.4
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build with Next.js
-        run: npm run build
+      - name: Validate and build
+        run: make validate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     needs: build

@@ -1,0 +1,160 @@
+---
+import { site } from "../data/site";
+import Layout from "../layouts/Layout.astro";
+import TechnologySkills from "../components/TechnologySkills";
+const education = [
+  {
+    period: "2024 — 2026",
+    title: "Análise e Desenvolvimento de Sistemas",
+    place: "Universidade Presbiteriana Mackenzie · cursando",
+  },
+  {
+    period: "2021 — 2024",
+    title: "Técnico em Informática",
+    place: "Senac Aclimação · concluído",
+  },
+];
+
+const courses = [
+  "Fundamentos e lógica de programação · Fundação Bradesco",
+  "Excel, lógica de dados e visualização · Fundação Bradesco",
+  "JavaScript: lógica, DOM, funções e eventos · Curso em Vídeo",
+  "Banco de dados · Udemy",
+];
+---
+
+<Layout
+  title={`Sobre | ${site.name}`}
+  description={`Trajetória, competências, formação acadêmica e cursos de ${site.name} em desenvolvimento de software.`}
+>
+  <div class="mx-auto max-w-6xl px-5 sm:px-8">
+    <section aria-labelledby="about-title" class="grid gap-8 py-10">
+      <div>
+        <p class="section-kicker">Sobre mim</p>
+        <h1
+          id="about-title"
+          class="mt-4 text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+        >
+          Um pouco sobre mim.
+        </h1>
+        <nav
+          aria-label="Seções da página Sobre"
+          class="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-teal-200"
+        >
+          <a
+            href="#competencias"
+            class="rounded-sm transition hover:text-teal-100"
+          >
+            Competências
+          </a>
+          <a href="#formacao" class="rounded-sm transition hover:text-teal-100">
+            Formação e cursos
+          </a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="space-y-5 text-lg leading-8 text-slate-300">
+          <p>
+            Comecei a programar porque queria criar jogos. Usei Construct 3 e
+            depois passei para Unity e C#, onde aprendi a trabalhar com lógica,
+            mecânicas e organização do código.
+          </p>
+          <p>
+            Hoje desenvolvo interfaces com React, Next.js e TypeScript, e APIs
+            com Go e Python.
+          </p>
+          <p>
+            Já trabalhei com cadastros, validação de dados, autenticação por
+            token e SQLite. Também escrevi testes automatizados e usei Docker
+            para rodar as APIs.
+          </p>
+          <p>
+            Também fiz integrações com APIs de localização e serviços de IA,
+            cuidando das requisições, das respostas e do tratamento de erros.
+          </p>
+        </div>
+        <p class="mt-8 border-t border-white/10 pt-5 text-sm leading-6 text-slate-400">
+          Na tecnologia desde <span class="text-slate-200">2021</span>
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="competencias"
+      aria-labelledby="skills-title"
+      class="scroll-mt-4 border-t border-white/10 py-8 lg:py-10"
+    >
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <h2
+          id="skills-title"
+          class="text-2xl font-semibold tracking-tight text-white"
+        >
+          Tecnologias
+        </h2>
+        <a
+          href="/projetos"
+          class="inline-flex items-center gap-2 rounded-sm text-sm font-medium text-teal-200 transition hover:translate-x-1"
+        >
+          Ver projetos <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <TechnologySkills />
+      <p class="mt-5 border-t border-white/10 pt-4 text-xs leading-6 text-slate-400">
+        Testes, documentação e automação:{" "}
+        <span class="text-slate-300">
+          pytest · Vitest · Swagger/OpenAPI · GitHub Actions.
+        </span>
+      </p>
+    </section>
+
+    <section
+      id="formacao"
+      aria-labelledby="education-title"
+      class="grid scroll-mt-4 gap-8 border-t border-white/10 py-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12 lg:py-16"
+    >
+      <div>
+        <p class="section-kicker">Formação</p>
+        <h2
+          id="education-title"
+          class="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+        >
+          Minha formação e cursos.
+        </h2>
+      </div>
+      <div>
+        <ol aria-label="Formação acadêmica" class="border-l border-white/10">
+          {education.map((item) => (
+            <li class="relative pb-8 pl-6 last:pb-0">
+              <span
+                aria-hidden="true"
+                class="absolute -left-[5px] top-2 size-2.5 rounded-full bg-teal-300 ring-4 ring-[#07111f]"
+              />
+              <p class="font-mono text-sm text-teal-300">{item.period}</p>
+              <h3 class="mt-2 text-xl font-semibold text-white">
+                {item.title}
+              </h3>
+              <p class="mt-2 text-sm leading-6 text-slate-400">{item.place}</p>
+            </li>
+          ))}
+        </ol>
+
+        <div class="mt-8 border-t border-white/10 pt-6">
+          <h3 class="text-lg font-semibold text-white">
+            Cursos complementares
+          </h3>
+          <ul aria-label="Cursos complementares" class="mt-4 space-y-3">
+            {courses.map((course) => (
+              <li class="flex items-start gap-3 text-sm leading-7 text-slate-300">
+                <span aria-hidden="true" class="text-teal-300">
+                  ·
+                </span>
+                {course}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
