@@ -1,0 +1,30 @@
+---
+import { site } from "../data/site";
+---
+
+<footer class="border-t border-white/8">
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-8 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+    <p>
+      {site.name} © {new Date().getFullYear()} · Desenvolvido por{" "}
+      <a
+        href={site.organization.url}
+        class="rounded-sm transition hover:text-teal-200"
+      >
+        {site.organization.name}
+      </a>
+    </p>
+    <div class="flex gap-5">
+      <a
+        href={site.github}
+        target="_blank"
+        rel="noreferrer"
+        class="transition hover:text-teal-200"
+      >
+        GitHub
+      </a>
+      <a href={`mailto:${site.email}`} class="transition hover:text-teal-200">
+        E-mail
+      </a>
+    </div>
+  </div>
+</footer>

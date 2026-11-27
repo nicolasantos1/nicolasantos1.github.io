@@ -3,13 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "bun --bun astro dev",
+    "build": "bun --bun astro build",
+    "preview": "bun --bun astro preview",
+    "start": "bun run preview",
+    "lint": "bun --bun eslint .",
+    "lint:fix": "bun --bun eslint . --fix",
+    "format": "bun --bun prettier --write .",
+    "format:check": "bun --bun prettier --check .",
+    "typecheck": "bun --bun astro check",
+    "check:links": "python3 scripts/check_export.py",
+    "check": "bun run format:check && bun run lint && bun run typecheck",
+    "validate": "bun run check && bun run build && bun run check:links"
   },
   "dependencies": {
-    "next": "16.3.0",
+    "@astrojs/react": "7.1.5",
+    "astro": "^7.4.9",
     "react": "19.2.8",
     "react-devicons": "^2.16.2",
     "react-dom": "19.2.8"
@@ -20,13 +29,19 @@
     }
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "typescript": "^5",
+    "@tailwindcss/vite": "^4",
+    "@astrojs/check": "^0.9.12",
+    "@eslint/js": "^9",
+    "typescript-eslint": "^8.72.2",
+    "eslint-plugin-astro": "^3.2.1",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2"
+  },
+  "packageManager": "bun@1.4.4"
 }

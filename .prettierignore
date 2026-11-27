@@ -1,0 +1,10 @@
+node_modules/
+.astro/
+.next/
+dist/
+out/
+build/
+bun.lock
+package-lock.json
+next-env.d.ts
+legacy/

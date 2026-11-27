@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../public/images/nicolas-logo1.png";
+import { site } from "../data/site";
+const navigation = [
+  { href: "/sobre", label: "Sobre" },
+  { href: "/projetos", label: "Projetos" },
+  { href: "/contato", label: "Contato" },
+];
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="sticky top-0 z-50 border-b border-white/8 bg-[#07111f]/80 backdrop-blur-xl">
+  <site-navigation class="mx-auto grid max-w-6xl grid-cols-[minmax(2rem,1fr)_auto_auto] items-center gap-x-2 px-4 py-4 sm:px-8 md:flex md:gap-4">
+    <a
+      href="/"
+      class="flex w-fit shrink-0 items-center gap-3 rounded-full text-sm font-semibold tracking-wide text-white md:mr-auto"
+      aria-label="Página inicial"
+      aria-current={pathname === "/" ? "page" : undefined}
+    >
+      <Image
+        src={logo}
+        densities={[1, 2, 3]}
+        format="webp"
+        alt=""
+        width="40"
+        height="40"
+        fetchpriority="high"
+        class="size-8 shrink-0 rounded-full ring-1 ring-white/15 sm:size-10"
+      />
+      <span class="hidden min-[480px]:inline">{site.name}</span>
+    </a>
+    <button
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-navigation"
+      class="inline-flex min-h-11 items-center justify-center gap-1 rounded-full border border-white/15 px-3 text-xs font-medium text-white transition hover:border-teal-300/40 hover:bg-white/5 sm:text-sm md:hidden"
+    >
+      Menu
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 16 16"
+        fill="none"
+        class="size-4 transition-transform"
+      >
+        <path
+          d="m4 6 4 4 4-4"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <nav
+      id="site-navigation"
+      class="hidden col-span-3 row-start-2 mt-4 min-w-0 border-t border-white/10 pt-3 md:mt-0 md:block md:border-0 md:pt-0"
+      aria-label="Navegação principal"
+    >
+      <ul class="flex flex-col gap-1 text-sm text-slate-300 md:flex-row md:items-center md:gap-2">
+        {navigation.map((item) => (
+          <li>
+            <a
+              class="nav-link min-h-11 items-center"
+              href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a
+      href={site.resume}
+      class="col-start-3 row-start-1 inline-flex min-h-11 items-center rounded-full border border-white/20 px-3 py-2 text-xs font-medium text-white transition hover:border-teal-200 hover:bg-white/5 sm:px-4 sm:text-sm"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Abrir currículo em PDF (nova aba)"
+    >
+      Currículo
+    </a>
+  </site-navigation>
+</header>
+<noscript>
+  <style is:inline>
+    site-navigation nav {
+      display: block;
+    }
+    site-navigation button {
+      display: none;
+    }
+  </style>
+</noscript>
+<script>
+  class SiteNavigation extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector("button")!;
+      const nav = this.querySelector("nav")!;
+      const desktop = window.matchMedia("(min-width: 768px)");
+      const controller = new AbortController();
+      this.controller = controller;
+      const setOpen = (open: boolean) => {
+        button.setAttribute("aria-expanded", String(open));
+        nav.classList.toggle("hidden", !open);
+        nav.classList.toggle("block", open);
+        button.querySelector("svg")?.classList.toggle("rotate-180", open);
+      };
+      button.addEventListener(
+        "click",
+        () => setOpen(button.getAttribute("aria-expanded") !== "true"),
+        { signal: controller.signal },
+      );
+      this.addEventListener(
+        "keydown",
+        (event) => {
+          if (
+            event.key === "Escape" &&
+            button.getAttribute("aria-expanded") === "true"
+          ) {
+            event.preventDefault();
+            setOpen(false);
+            button.focus();
+          }
+        },
+        { signal: controller.signal },
+      );
+      this.addEventListener(
+        "click",
+        (event) => {
+          if (event.target instanceof Element && event.target.closest("a"))
+            setOpen(false);
+        },
+        { signal: controller.signal },
+      );
+      desktop.addEventListener(
+        "change",
+        (event) => {
+          if (event.matches) setOpen(false);
+        },
+        { signal: controller.signal },
+      );
+    }
+    private controller?: AbortController;
+    disconnectedCallback() {
+      this.controller?.abort();
+    }
+  }
+  if (!customElements.get("site-navigation"))
+    customElements.define("site-navigation", SiteNavigation);
+</script>
